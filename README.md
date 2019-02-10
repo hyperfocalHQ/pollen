@@ -1,6 +1,6 @@
 # Bloom <br/> [![Version][npm-badge]][npm-package] ![Size][size-badge] ![Contribute][prs-badge]
 
-Bloom is a future facing, modular, functional CSS microlibrary built on CSS variables. Use it from prototype to production as a framework for your own design systems.
+Bloom is a future facing, modular, functional CSS microlibrary built on CSS variables
 
 ```css
 .button {
