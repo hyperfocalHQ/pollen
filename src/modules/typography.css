@@ -3,15 +3,13 @@
  */
 :root {
   /**
-   * Modular scale
+   * Configurable modular scale
    * Applied as font-size
-   * Configurable with ratio and base
    */
   --scale-ratio: 1.33;
-  --scale-base: 1rem;
   --scale-000: 0.75rem;
   --scale-00: 0.875rem;
-  --scale-0: var(--scale-base);
+  --scale-0: 1rem;
   --scale-1: calc(var(--scale-0) * var(--scale-ratio));
   --scale-2: calc(var(--scale-1) * var(--scale-ratio));
   --scale-3: calc(var(--scale-2) * var(--scale-ratio));
@@ -57,9 +55,8 @@
   --measure-wide: 34em;
 
   /**
-   * Font stacks
+   * Font stack shorthands
    * Applied as font
-   * Configurable shorthands of typographic standards
    */
   --font-heading: var(--font-heading-weight, 400)
     var(--font-heading-size, var(--scale-2)) / var(--leading-heading)
