@@ -1,6 +1,6 @@
 # Bloom <br/> [![Version][npm-badge]][npm-package] ![Size][size-badge] ![Contribute][prs-badge]
 
-Bloom is a future facing, modular, functional CSS microframework built on CSS variables. 
+Bloom is a future-facing, functional CSS microframework built on CSS variables. It helps you rapidly build custom interfaces and encourages consistency in production, as a foundation for your own design system.
 
 ```css
 .button {
@@ -15,13 +15,13 @@ Bloom is a future facing, modular, functional CSS microframework built on CSS va
 
 ## Get Bloom
 
-Install Bloom from NPM
+Install Bloom with NPM
 
 ```sh
 npm i @tomorrow/bloom
 ```
 
-Or link directly from the unpkg CDN
+Or include it directly from the CDN
 
 ```html
 <link rel="stylesheet" href="https://unpkg.com/@tomorrow/bloom/bloom.css" />
@@ -29,7 +29,7 @@ Or link directly from the unpkg CDN
 
 ## Documentation
 
-Full documentaion is available at **[bloom.builtbytomorrow.com][bloom]**
+Read the full documentaion at **[bloom.builtbytomorrow.com][bloom]**
 
 ---
 
