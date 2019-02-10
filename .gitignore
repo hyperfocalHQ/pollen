@@ -2,7 +2,8 @@
 node_modules
 
 # Dist
-lib
+/bloom.css
+/modules
 
 # Runtime
 .DS_Store
