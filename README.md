@@ -1,4 +1,4 @@
-# Bloom <br/> [![Version][npm-badge]][npm-package] ![Size][size-badge] ![License][license-badge]
+# Bloom <br/> [![Version][npm-badge]][npm-package] ![Size][size-badge] ![License][license-badge] ![Contribute][prs-badge]
 
 Bloom is a future-facing, modular, functional microlibrary built on CSS variables. It can support you from prototype to production as the foundation for your own robust design system.
 
@@ -40,6 +40,7 @@ Full documentaion is available at **[bloom.builtbytomorrow.com][bloom]**
 [npm-badge]: https://img.shields.io/npm/v/@tomorrow/bloom.svg?style=flat
 [license-badge]: https://img.shields.io/npm/l/@tomorrow/bloom.svg?style=flat
 [size-badge]: https://img.badgesize.io/https://unpkg.com/@tomorrow/bloom/bloom.css?compression=gzip&label=size
+[prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg
 
 <!-- URLs -->
 
