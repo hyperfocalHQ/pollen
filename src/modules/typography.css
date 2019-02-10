@@ -1,0 +1,71 @@
+/**
+ * Typography
+ */
+:root {
+  /**
+   * Modular scale
+   * Applied as font-size
+   * Configurable with ratio and base
+   */
+  --scale-ratio: 1.33;
+  --scale-base: 1rem;
+  --scale-000: 0.75rem;
+  --scale-00: 0.875rem;
+  --scale-0: var(--scale-base);
+  --scale-1: calc(var(--scale-0) * var(--scale-ratio));
+  --scale-2: calc(var(--scale-1) * var(--scale-ratio));
+  --scale-3: calc(var(--scale-2) * var(--scale-ratio));
+  --scale-4: calc(var(--scale-3) * var(--scale-ratio));
+  --scale-5: calc(var(--scale-4) * var(--scale-ratio));
+  --scale-6: calc(var(--scale-5) * var(--scale-ratio));
+  --scale-7: calc(var(--scale-6) * var(--scale-ratio));
+  --scale-8: calc(var(--scale-7) * var(--scale-ratio));
+
+  /**
+   * Fonts
+   * Applied as font-family
+   */
+  --font-family-heading: sans-serif;
+  --font-family-body: sans-serif;
+  --font-family-ui: system-ui;
+
+  /**
+   * Leading
+   * Applied as line-height
+   */
+  --leading-heading: 1.25;
+  --leading-body: 1.6;
+  --leading-ui: 1;
+
+  /**
+   * Tracking
+   * Applied as letter-spacing
+   * Inspired by Tachyons http://tachyons.io/docs/typography/tracking/
+   */
+  --tracked: 0.1em;
+  --tracked-tight: -0.05em;
+  --tracked-loose: 0.25em;
+
+  /**
+   * Measures
+   * Applied as max-width
+   * Inspired by Tachyons https://tachyons.io/docs/typography/measure/
+   * Results in ~45/~66/~80 character measures
+   */
+  --measure-narrow: 20em;
+  --measure: 30em;
+  --measure-wide: 34em;
+
+  /**
+   * Font stacks
+   * Applied as font
+   * Configurable shorthands of typographic standards
+   */
+  --font-heading: var(--font-heading-weight, 400)
+    var(--font-heading-size, var(--scale-2)) / var(--leading-heading)
+    var(--font-family-heading);
+  --font-body: var(--font-body-weight, 400) var(--scale-0) / var(--leading-body)
+    var(--font-family-body);
+  --font-ui: var(--font-ui-weight, 400) var(--scale-00) / var(--leading-ui)
+    var(--font-family-ui);
+}

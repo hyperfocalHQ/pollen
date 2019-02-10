@@ -1,0 +1,74 @@
+/**
+ * UI library
+ * For consistency across space and motion
+ */
+:root {
+  /**
+   * Size scale
+   * Applied in widths, heights, margins, and padding
+   */
+  --size-000: 0.25rem;
+  --size-00: 0.5rem;
+  --size-1: 1rem;
+  --size-2: 2rem;
+  --size-3: 4rem;
+  --size-4: 8rem;
+  --size-5: 16rem;
+  --size-6: 32rem;
+  --size-7: 48rem;
+  --size-8: 64rem;
+  --size-9: 96rem;
+
+  /**
+   * Elevation
+   * Applied as box-shadow
+   * Inspired Material Design https://material.io/design/environment/elevation.html
+   */
+  --elevation-1: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  --elevation-2: 0 3px 4px 0 rgba(0, 0, 0, 0.14),
+    0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  --elevation-3: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --elevation-4: 0 6px 10px 0 rgba(0, 0, 0, 0.14),
+    0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+  --elevation-5: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+    0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+  --elevation-6: 0 16px 24px 2px rgba(0, 0, 0, 0.14),
+    0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+
+  /**
+   * Motion easing curves
+   * Applied in transitions and animations
+   * Inspired by Material Design https://material.io/design/motion/speed.html#easing
+   */
+  --easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --easing-decelerate: cubic-bezier(0, 0, 0.2, 1);
+  --easing-accelerate: cubic-bezier(0.4, 0, 1, 1);
+
+  /**
+   * Layers
+   * Applied as z-index
+   */
+  --layer-0: 0;
+  --layer-1: 10;
+  --layer-2: 20;
+  --layer-3: 30;
+  --layer-4: 40;
+  --layer-5: 50;
+  --layer-top: 2147483647;
+
+  /**
+   * Radiuses
+   * Applied as border-radius
+   * Relative to font size of content
+   */
+  --radius-0: 0;
+  --radius-1: 0.125em;
+  --radius-2: 0.25em;
+  --radius-3: 0.5em;
+  --radius-4: 1em;
+  --radius-5: 1.2em;
+  --radius-100: 100%;
+  --radius-round: 9999px;
+}

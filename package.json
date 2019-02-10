@@ -1,0 +1,45 @@
+{
+  "name": "bloom-css",
+  "version": "0.0.0",
+  "description": "Functional CSS for the future",
+  "main": "bloom.css",
+  "scripts": {
+    "develop": "postcss 'src/**/*.css' --base src -d . -w",
+    "build": "NODE_ENV=production postcss 'src/**/*.css' --base src -d .",
+    "prepublishOnly": "npm run build",
+    "clean": "rm -rf ./bloom.css ./modules"
+  },
+  "files": [
+    "/bloom.css",
+    "/modules/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/builtbytomorrow/bloom.git"
+  },
+  "keywords": [
+    "css",
+    "functional css",
+    "css library",
+    "css framework",
+    "css variables"
+  ],
+  "author": {
+    "name": "Tomorrow Labs",
+    "url": "https://www.builtbytomorrow.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/builtbytomorrow/bloom/issues"
+  },
+  "homepage": "https://bloom.builtbytomorrow.com",
+  "devDependencies": {
+    "cssnano": "^4.1.8",
+    "postcss-cli": "^6.1.1",
+    "postcss-font-family-system-ui": "^4.1.0",
+    "postcss-import": "^12.0.1",
+    "prettier": "^1.16.4",
+    "stylelint": "^9.10.1",
+    "stylelint-config-recommended": "^2.1.0"
+  }
+}

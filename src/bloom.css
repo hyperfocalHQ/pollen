@@ -1,0 +1,7 @@
+/**
+ * CSSlib framework
+ * Entrypoint for importing the entire library
+ */
+@import "./modules/typography.css";
+@import "./modules/colors.css";
+@import "./modules/ui.css";
