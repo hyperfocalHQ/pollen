@@ -1,6 +1,6 @@
 # Bloom <br/> [![Version][npm-badge]][npm-package] ![Size][size-badge] ![Contribute][prs-badge]
 
-Bloom is a future-facing, modular, functional microlibrary built on CSS variables. It can support you from prototype to production as the foundation for your own robust design system.
+Bloom is a future facing, modular, functional CSS microlibrary built on CSS variables. Use it from prototype to production as a framework for your own design systems.
 
 ```css
 .button {
@@ -33,7 +33,7 @@ Full documentaion is available at **[bloom.builtbytomorrow.com][bloom]**
 
 ---
 
-&copy; MIT [Tomorrow Labs][tomorrow]
+&copy; MIT [Tomorrow][tomorrow]
 
 <!-- Badges -->
 
