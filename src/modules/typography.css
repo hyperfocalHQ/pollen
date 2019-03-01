@@ -7,7 +7,7 @@
    * Applied as font-size
    */
   --scale-ratio: 1.33;
-  --scale-000: 0.75rem;
+  --scale-000: 0.7rem;
   --scale-00: 0.875rem;
   --scale-0: 1rem;
   --scale-1: calc(var(--scale-0) * var(--scale-ratio));
