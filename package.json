@@ -1,6 +1,6 @@
 {
   "name": "@tomorrow/bloom",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Functional CSS for the future",
   "main": "bloom.css",
   "scripts": {
