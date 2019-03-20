@@ -4,10 +4,10 @@
  */
 :root {
   /* Greyscale */
-  --color-grey-100: #fafafa;
+  --color-grey-100: #fbfbfb;
   --color-grey-300: #f4f5f9;
-  --color-grey-500: #8f919b;
-  --color-grey-700: #69707b;
+  --color-grey-500: #d7d8df;
+  --color-grey-700: #7b808a;
   --color-grey: var(--color-grey-500);
   --color-black: #21262c;
 
