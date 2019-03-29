@@ -29,7 +29,7 @@ Or include it directly from the CDN
 
 ## Documentation
 
-Read the full documentaion at **[bloom.builtbytomorrow.com][bloom]**
+Read the full documentaion at **[bloom.tomorrowstudio.co][bloom]**
 
 ---
 
@@ -43,6 +43,6 @@ Read the full documentaion at **[bloom.builtbytomorrow.com][bloom]**
 
 <!-- URLs -->
 
-[bloom]: https://bloom.builtbytomorrow.com
+[bloom]: https://bloom.tomorrowstudio.co
 [npm-package]: https://www.npmjs.com/package/@tomorrow/bloom
-[tomorrow]: https://www.builtbytomorrow.com
+[tomorrow]: https://www.tomorrowstudio.co

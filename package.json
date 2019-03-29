@@ -26,13 +26,13 @@
   ],
   "author": {
     "name": "Tomorrow",
-    "url": "https://www.builtbytomorrow.com"
+    "url": "https://www.tomorrowstudio.co"
   },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/builtbytomorrow/bloom/issues"
   },
-  "homepage": "https://bloom.builtbytomorrow.com",
+  "homepage": "https://bloom.tomorrowstudio.co",
   "devDependencies": {
     "cssnano": "^4.1.8",
     "postcss-cli": "^6.1.1",
