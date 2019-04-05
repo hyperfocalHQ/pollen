@@ -23,16 +23,16 @@
    * Fonts
    * Applied as font-family
    */
-  --font-family-heading: sans-serif;
-  --font-family-body: sans-serif;
-  --font-family-ui: system-ui;
+  --font-family-default: system-ui;
+  --font-family-heading: var(--font-family-default);
+  --font-family-ui: var(--font-family-default);
 
   /**
    * Leading
    * Applied as line-height
    */
+  --leading-default: 1.6;
   --leading-heading: 1.25;
-  --leading-body: 1.6;
   --leading-ui: 1;
 
   /**
@@ -58,11 +58,11 @@
    * Font stack shorthands
    * Applied as font
    */
+  --font-default: var(--font-body-weight, 400) var(--scale-0) /
+    var(--leading-default) var(--font-family-default);
   --font-heading: var(--font-heading-weight, 400)
     var(--font-heading-size, var(--scale-2)) / var(--leading-heading)
     var(--font-family-heading);
-  --font-body: var(--font-body-weight, 400) var(--scale-0) / var(--leading-body)
-    var(--font-family-body);
   --font-ui: var(--font-ui-weight, 400) var(--scale-00) / var(--leading-ui)
     var(--font-family-ui);
 }
