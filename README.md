@@ -27,10 +27,6 @@ Or include it directly from the CDN
 <link rel="stylesheet" href="https://unpkg.com/@tomorrow/bloom/bloom.css" />
 ```
 
-## Documentation
-
-Read the full documentaion at **[bloom.tomorrowstudio.co][bloom]**
-
 ---
 
 &copy; MIT [Tomorrow][tomorrow]
