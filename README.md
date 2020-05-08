@@ -27,10 +27,6 @@ Or include it directly from the CDN
 <link rel="stylesheet" href="https://unpkg.com/@tomorrow/bloom/bloom.css" />
 ```
 
----
-
-&copy; MIT [Tomorrow][tomorrow]
-
 <!-- Badges -->
 
 [npm-badge]: https://img.shields.io/npm/v/@tomorrow/bloom.svg?style=flat
