@@ -34,12 +34,12 @@
   },
   "homepage": "https://bloom.style",
   "devDependencies": {
-    "cssnano": "^4.1.8",
-    "postcss-cli": "^6.1.1",
-    "postcss-font-family-system-ui": "^4.1.0",
+    "cssnano": "^4.1.10",
+    "postcss-cli": "^7.1.1",
+    "postcss-font-family-system-ui": "^4.2.0",
     "postcss-import": "^12.0.1",
-    "prettier": "^1.16.4",
-    "stylelint": "^9.10.1",
-    "stylelint-config-recommended": "^2.1.0"
+    "prettier": "^2.0.5",
+    "stylelint": "^13.3.3",
+    "stylelint-config-recommended": "^3.0.0"
   }
 }
