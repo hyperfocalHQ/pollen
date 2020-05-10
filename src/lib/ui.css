@@ -64,11 +64,12 @@
    * Relative to font size of content
    */
   --radius-0: 0;
-  --radius-1: 0.125em;
-  --radius-2: 0.25em;
+  --radius-1: 0.15em;
+  --radius-2: 0.35em;
   --radius-3: 0.5em;
-  --radius-4: 1em;
+  --radius-4: 0.8em;
   --radius-5: 1.2em;
+  --radius-6: 1.5em;
   --radius-100: 100%;
   --radius-round: 9999px;
 }

@@ -55,14 +55,22 @@
   --measure-wide: 34em;
 
   /**
+   * Weights
+   * Applied as font-weight
+   */
+  --font-weight-default: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /**
    * Font stack shorthands
    * Applied as font
    */
-  --font-default: var(--font-body-weight, 400) var(--scale-0) /
+  --font-default: var(--font-weight-body, 400) var(--scale-0) /
     var(--leading-default) var(--font-family-default);
-  --font-heading: var(--font-heading-weight, 400)
-    var(--font-heading-size, var(--scale-2)) / var(--leading-heading)
+  --font-heading: var(--font-weight-heading, 400)
+    var(--font-size-heading, var(--scale-2)) / var(--leading-heading)
     var(--font-family-heading);
-  --font-ui: var(--font-ui-weight, 400) var(--scale-00) / var(--leading-ui)
+  --font-ui: var(--font-weight-ui, 400) var(--scale-00) / var(--leading-ui)
     var(--font-family-ui);
 }
