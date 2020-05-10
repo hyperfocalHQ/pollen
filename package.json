@@ -7,15 +7,15 @@
     "develop": "postcss 'src/**/*.css' --base src -d . -w",
     "build": "NODE_ENV=production postcss 'src/**/*.css' --base src -d .",
     "prepublishOnly": "npm run build",
-    "clean": "rm -rf ./bloom.css ./modules"
+    "clean": "rm -rf ./bloom.css ./lib"
   },
   "files": [
     "/bloom.css",
-    "/modules/**/*"
+    "/lib/**/*"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/builtbytomorrow/bloom.git"
+    "url": "git+https://github.com/radioactivepesto/bloom.git"
   },
   "keywords": [
     "css",
@@ -25,14 +25,14 @@
     "design-system"
   ],
   "author": {
-    "name": "Tomorrow",
-    "url": "https://www.tomorrowstudio.co"
+    "name": "Radioactive Pesto",
+    "url": "https://radioactivepesto.com"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/builtbytomorrow/bloom/issues"
+    "url": "https://github.com/radioactivepesto/bloom/issues"
   },
-  "homepage": "https://bloom.tomorrowstudio.co",
+  "homepage": "https://bloom.style",
   "devDependencies": {
     "cssnano": "^4.1.8",
     "postcss-cli": "^6.1.1",

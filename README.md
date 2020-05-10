@@ -1,4 +1,4 @@
-# Bloom <br/> [![Version][npm-badge]][npm-package] ![Size][size-badge] ![Contribute][prs-badge]
+# Bloom <br/> [![Version][npm-badge]][npm-package] ![Size][size-badge]
 
 Bloom is a future-facing, functional CSS microframework built on CSS variables. It helps you rapidly build custom interfaces and encourages consistency in production, as a foundation for your own design system.
 
@@ -18,31 +18,25 @@ Bloom is a future-facing, functional CSS microframework built on CSS variables. 
 Install Bloom with NPM
 
 ```sh
-npm i @tomorrow/bloom
+npm i bloom-css
 ```
 
 Or include it directly from the CDN
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@tomorrow/bloom/bloom.css" />
+<link rel="stylesheet" href="https://unpkg.com/bloom-css/bloom.css" />
 ```
 
 ## Documentation
 
-Read the full documentaion at **[bloom.tomorrowstudio.co][bloom]**
-
----
-
-&copy; MIT [Tomorrow][tomorrow]
+Read the full documentaion at **[bloom.style][bloom]**
 
 <!-- Badges -->
 
-[npm-badge]: https://img.shields.io/npm/v/@tomorrow/bloom.svg?style=flat
-[size-badge]: https://img.badgesize.io/https://unpkg.com/@tomorrow/bloom/bloom.css?compression=gzip&label=size
-[prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg
+[npm-badge]: https://img.shields.io/npm/v/bloom-css.svg?style=flat
+[size-badge]: https://img.badgesize.io/https://unpkg.com/bloom-css/bloom.css?compression=gzip&label=size
 
 <!-- URLs -->
 
-[bloom]: https://bloom.tomorrowstudio.co
-[npm-package]: https://www.npmjs.com/package/@tomorrow/bloom
-[tomorrow]: https://www.tomorrowstudio.co
+[bloom]: https://bloom.style
+[npm-package]: https://www.npmjs.com/package/bloom-css
