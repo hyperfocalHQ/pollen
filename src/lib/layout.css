@@ -5,24 +5,24 @@
 :root {
   /**
    * Size scale
-   * Applied to any sizing property
-   * Eg: margin, padding, width, height
+   * Applied to sizing property
+   * Eg: margin, padding, height
    */
-  --size-000: 0.5rem;
-  --size-00: 0.75rem;
-  --size-0: 1rem;
-  --size-1: 1.5rem;
-  --size-2: 2rem;
-  --size-3: 3rem;
-  --size-4: 4rem;
-  --size-5: 6rem;
-  --size-6: 8rem;
-  --size-7: 10rem;
-  --size-8: 12rem;
-  --size-9: 14rem;
-  --size-10: 16rem;
-  --size-11: 32rem;
-  --size-12: 48rem;
+  --spacing-000: 0.5rem;
+  --spacing-00: 0.75rem;
+  --spacing-0: 1rem;
+  --spacing-1: 1.5rem;
+  --spacing-2: 2rem;
+  --spacing-3: 3rem;
+  --spacing-4: 4rem;
+  --spacing-5: 6rem;
+  --spacing-6: 8rem;
+  --spacing-7: 10rem;
+  --spacing-8: 12rem;
+  --spacing-9: 14rem;
+  --spacing-10: 16rem;
+  --spacing-11: 32rem;
+  --spacing-12: 48rem;
 
   /**
    * Widths

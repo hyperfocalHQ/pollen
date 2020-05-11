@@ -5,7 +5,7 @@ Bloom is a future-facing, functional CSS microframework built on CSS variables. 
 ```css
 .button {
   font: var(--font-sans);
-  padding: var(--size-1);
+  padding: var(--spacing-1);
   background: var(--color-blue);
   color: white;
   border-radius: var(--radius-2);
