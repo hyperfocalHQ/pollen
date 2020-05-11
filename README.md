@@ -1,6 +1,8 @@
 # Pollen <br/> [![Version](https://img.shields.io/npm/v/pollen-css.svg?style=flat)](https://www.npmjs.com/package/pollen-css) ![Size](https://img.badgesize.io/https://unpkg.com/pollen-css/pollen.css?compression=gzip&label=size)
 
-Pollen is a functional utility-first CSS framework built on CSS variables. It helps you rapidly build custom interfaces and encourages consistency as a foundation for your own design system.
+Pollen is a functional CSS library that provides a consistent foundation for modern design systems. It's featherweight, extensible, built on CSS variables, and ready for the future.
+
+#### What it looks like
 
 ```css
 .button {
@@ -18,7 +20,7 @@ Pollen is a functional utility-first CSS framework built on CSS variables. It he
 }
 ```
 
-## Get Pollen
+## Installation
 
 Install Pollen with NPM
 
@@ -32,6 +34,6 @@ Or include it directly from the CDN
 <link rel="stylesheet" href="https://unpkg.com/pollen-css/pollen.css" />
 ```
 
-## Documentation
+## Usage
 
 Read the full documentaion at **[pollen.style](https://pollen.style)**
