@@ -1,4 +1,4 @@
-# Pollen <br/> [![Version](https://img.shields.io/npm/v/pollen-css.svg?style=flat)](https://www.npmjs.com/package/pollen-css) ![Size](https://img.badgesize.io/https://unpkg.com/pollen-css/bloom.css?compression=gzip&label=size)
+# Pollen <br/> [![Version](https://img.shields.io/npm/v/pollen-css.svg?style=flat)](https://www.npmjs.com/package/pollen-css) ![Size](https://img.badgesize.io/https://unpkg.com/pollen-css/pollen.css?compression=gzip&label=size)
 
 Pollen is a functional utility-first CSS framework built on CSS variables. It helps you rapidly build custom interfaces and encourages consistency as a foundation for your own design system.
 
