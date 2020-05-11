@@ -35,7 +35,7 @@
    * Applied as border-radius
    * Relative to font size of content
    */
-  --radius-1: 0.125em;
+  --radius-1: 0.2em;
   --radius-2: 0.375em;
   --radius-3: 0.5em;
   --radius-4: 0.8em;
