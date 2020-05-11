@@ -22,13 +22,17 @@ Pollen is a functional CSS library that provides a consistent foundation for mod
 
 ## Installation
 
-Install Pollen with NPM
+Install Pollen with NPM, and either import it with your bundler of choice.
 
 ```sh
 npm i pollen-css
 ```
 
-Or include it directly from the CDN
+```js
+import 'pollen-css'
+```
+
+Or include it directly from the Unpkg CDN
 
 ```html
 <link rel="stylesheet" href="https://unpkg.com/pollen-css/pollen.css" />
