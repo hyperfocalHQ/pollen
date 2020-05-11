@@ -1,0 +1,69 @@
+/**
+ * Layout
+ * For structural consistency across space
+ */
+:root {
+  /**
+   * Size scale
+   * Applied to any sizing property
+   * Eg: margin, padding, width, height
+   */
+  --size-000: 0.5rem;
+  --size-00: 0.75rem;
+  --size-0: 1rem;
+  --size-1: 1.5rem;
+  --size-2: 2rem;
+  --size-3: 3rem;
+  --size-4: 4rem;
+  --size-5: 6rem;
+  --size-6: 8rem;
+  --size-7: 10rem;
+  --size-8: 12rem;
+  --size-9: 14rem;
+  --size-10: 16rem;
+  --size-11: 32rem;
+  --size-12: 48rem;
+
+  /**
+   * Widths
+   * Applied as max-width
+   */
+  --width-1: 20rem;
+  --width-2: 24rem;
+  --width-3: 28rem;
+  --width-4: 32rem;
+  --width-5: 36rem;
+  --width-6: 42rem;
+  --width-7: 48rem;
+  --width-8: 56rem;
+  --width-9: 64rem;
+  --width-10: 72rem;
+  --width-11: 80rem;
+  --width-12: 96rem;
+
+  /**
+   * Grid gaps
+   * Applied as padding (flex grid) or grid-gap (CSS Grid)
+   */
+  --gap-00: 0.75rem;
+  --gap-0: 1rem;
+  --gap-1: 1.5rem;
+  --gap-2: 2.5rem;
+  --gap-3: 3rem;
+  --gap-4: 4rem;
+  --gap-5: 6rem;
+  --gap-6: 8rem;
+
+  /**
+   * Grid gap offsets
+   * Applied as negative margin in flex grids
+   */
+  --gap-offset-00: calc(0px - var(--gap-00));
+  --gap-offset-0: calc(0px - var(--gap-0));
+  --gap-offset-1: calc(0px - var(--gap-1));
+  --gap-offset-2: calc(0px - var(--gap-2));
+  --gap-offset-3: calc(0px - var(--gap-3));
+  --gap-offset-4: calc(0px - var(--gap-4));
+  --gap-offset-5: calc(0px - var(--gap-5));
+  --gap-offset-6: calc(0px - var(--gap-6));
+}

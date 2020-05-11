@@ -1,24 +1,8 @@
 /**
  * UI library
- * For consistency across space and motion
+ * For consistency across UI and motion
  */
 :root {
-  /**
-   * Size scale
-   * Applied in widths, heights, margins, and padding
-   */
-  --size-000: 0.25rem;
-  --size-00: 0.5rem;
-  --size-1: 1rem;
-  --size-2: 2rem;
-  --size-3: 4rem;
-  --size-4: 8rem;
-  --size-5: 16rem;
-  --size-6: 32rem;
-  --size-7: 48rem;
-  --size-8: 64rem;
-  --size-9: 96rem;
-
   /**
    * Elevation
    * Applied as box-shadow
@@ -43,33 +27,30 @@
    * Inspired by Material Design https://material.io/design/motion/speed.html#easing
    */
   --easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
-  --easing-decelerate: cubic-bezier(0, 0, 0.2, 1);
   --easing-accelerate: cubic-bezier(0.4, 0, 1, 1);
-
-  /**
-   * Layers
-   * Applied as z-index
-   */
-  --layer-0: 0;
-  --layer-1: 10;
-  --layer-2: 20;
-  --layer-3: 30;
-  --layer-4: 40;
-  --layer-5: 50;
-  --layer-top: 2147483647;
+  --easing-decelerate: cubic-bezier(0, 0, 0.2, 1);
 
   /**
    * Radiuses
    * Applied as border-radius
    * Relative to font size of content
    */
-  --radius-0: 0;
-  --radius-1: 0.15em;
-  --radius-2: 0.35em;
+  --radius-1: 0.125em;
+  --radius-2: 0.375em;
   --radius-3: 0.5em;
   --radius-4: 0.8em;
-  --radius-5: 1.2em;
-  --radius-6: 1.5em;
-  --radius-100: 100%;
+  --radius-5: 1em;
+  --radius-6: 1.25em;
   --radius-round: 9999px;
+
+  /**
+   * Layers
+   * Applied as z-index
+   */
+  --layer-1: 10;
+  --layer-2: 20;
+  --layer-3: 30;
+  --layer-4: 40;
+  --layer-5: 50;
+  --layer-top: 2147483647;
 }

@@ -1,111 +1,70 @@
 /**
  * Colors
- * Based on Material Design https://material.io/design/color/the-color-system.html
+ * For rapid visual prototyping
  */
 :root {
+  --color-black: #1a202c;
+
   /* Greyscale */
-  --color-grey-100: #fbfbfb;
-  --color-grey-300: #f4f5f9;
-  --color-grey-500: #d7d8df;
-  --color-grey-700: #7b808a;
+  --color-grey-100: #f7fafc;
+  --color-grey-300: #e2e8f0;
+  --color-grey-500: #a0aec0;
+  --color-grey-700: #4a5568;
   --color-grey: var(--color-grey-500);
-  --color-black: #21262c;
 
   /* Red */
-  --color-red-300: #e57373;
-  --color-red-500: #f44336;
-  --color-red-700: #d32f2f;
+  --color-red-300: #fc8181;
+  --color-red-500: #e53e3e;
+  --color-red-700: #c53030;
   --color-red: var(--color-red-500);
 
   /* Pink */
-  --color-pink-300: #f06292;
-  --color-pink-500: #e91e63;
-  --color-pink-700: #c2185b;
+  --color-pink-300: #fbb6ce;
+  --color-pink-500: #ed64a6;
+  --color-pink-700: #d53f8c;
   --color-pink: var(--color-pink-500);
 
   /* Purple */
-  --color-purple-300: #ba68c8;
-  --color-purple-500: #9c27b0;
-  --color-purple-700: #7b1fa2;
+  --color-purple-300: #b794f4;
+  --color-purple-500: #805ad5;
+  --color-purple-700: #6b46c1;
   --color-purple: var(--color-purple-500);
 
-  /* Deep Purple */
-  --color-deep-purple-300: #9575cd;
-  --color-deep-purple-500: #673ab7;
-  --color-deep-purple-700: #512da8;
-  --color-deep-purple: var(--color-deep-purple-500);
-
   /* Indigo */
-  --color-indigo-300: #7986cb;
-  --color-indigo-500: #3f51b5;
-  --color-indigo-700: #303f9f;
+  --color-indigo-300: #7f9cf5;
+  --color-indigo-500: #5a67d8;
+  --color-indigo-700: #4c51bf;
   --color-indigo: var(--color-indigo-500);
 
   /* Blue */
-  --color-blue-300: #64b5f6;
-  --color-blue-500: #2196f3;
-  --color-blue-700: #1976d2;
+  --color-blue-300: #63b3ed;
+  --color-blue-500: #4299e1;
+  --color-blue-700: #3182ce;
   --color-blue: var(--color-blue-500);
 
-  /* Light Blue */
-  --color-light-blue-300: #4fc3f7;
-  --color-light-blue-500: #03a9f4;
-  --color-light-blue-700: #0288d1;
-  --color-light-blue: var(--color-light-blue-500);
-
-  /* Cyan */
-  --color-cyan-300: #4dd0e1;
-  --color-cyan-500: #00bcd4;
-  --color-cyan-700: #0097a7;
-  --color-cyan: var(--color-cyan-500);
-
   /* Teal */
-  --color-teal-300: #4db6ac;
-  --color-teal-500: #009688;
-  --color-teal-700: #00796b;
+  --color-teal-300: #81e6d9;
+  --color-teal-500: #38b2ac;
+  --color-teal-700: #2c7a7b;
   --color-teal: var(--color-teal-500);
 
   /* Green */
-  --color-green-300: #81c784;
-  --color-green-500: #4caf50;
-  --color-green-700: #388e3c;
+  --color-green-300: #9ae6b4;
+  --color-green-500: #48bb78;
+  --color-green-700: #2f855a;
   --color-green: var(--color-green-500);
 
-  /* Light Green */
-  --color-light-green-300: #aed581;
-  --color-light-green-500: #8bc34a;
-  --color-light-green-700: #689f38;
-  --color-light-green: var(--color-light-green-500);
-
-  /* Lime */
-  --color-lime-300: #dce775;
-  --color-lime-500: #cddc39;
-  --color-lime-700: #afb42b;
-  --color-lime: var(--color-lime-500);
-
   /* Yellow */
-  --color-yellow-300: #fff176;
-  --color-yellow-500: #ffeb3b;
-  --color-yellow-700: #fbc02d;
+  --color-yellow-300: #faf089;
+  --color-yellow-500: #ecc94b;
+  --color-yellow-700: #d69e2e;
   --color-yellow: var(--color-yellow-500);
 
-  /* Amber */
-  --color-amber-300: #ffd54f;
-  --color-amber-500: #ffc107;
-  --color-amber-700: #ffa000;
-  --color-amber: var(--color-amber-500);
-
   /* Orange */
-  --color-orange-300: #ffb74d;
-  --color-orange-500: #ff9800;
-  --color-orange-700: #f57c00;
+  --color-orange-300: #fbd38d;
+  --color-orange-500: #ed8936;
+  --color-orange-700: #dd6b20;
   --color-orange: var(--color-orange-500);
-
-  /* Deep Orange */
-  --color-deep-orange-300: #ff8a65;
-  --color-deep-orange-500: #ff5722;
-  --color-deep-orange-700: #e64a19;
-  --color-deep-orange: var(--color-deep-orange-500);
 
   /* Brown */
   --color-brown-300: #a1887f;

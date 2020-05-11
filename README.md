@@ -1,15 +1,20 @@
-# Bloom <br/> [![Version][npm-badge]][npm-package] ![Size][size-badge]
+# Bloom <br/> [![Version](https://img.shields.io/npm/v/bloom-css.svg?style=flat)](https://www.npmjs.com/package/bloom-css) ![Size](https://img.badgesize.io/https://unpkg.com/bloom-css/bloom.css?compression=gzip&label=size)
 
 Bloom is a future-facing, functional CSS microframework built on CSS variables. It helps you rapidly build custom interfaces and encourages consistency in production, as a foundation for your own design system.
 
 ```css
 .button {
-  font: var(--font-ui);
-  padding: var(--size-00);
-  background: var(--color-blue-500);
+  font: var(--font-sans);
+  padding: var(--size-1);
+  background: var(--color-blue);
   color: white;
   border-radius: var(--radius-2);
   box-shadow: var(--elevation-1);
+  transition: background 150ms var(--easing-standard);
+}
+
+.button:hover {
+  background: var(--color-blue-700);
 }
 ```
 
@@ -29,14 +34,4 @@ Or include it directly from the CDN
 
 ## Documentation
 
-Read the full documentaion at **[bloom.style][bloom]**
-
-<!-- Badges -->
-
-[npm-badge]: https://img.shields.io/npm/v/bloom-css.svg?style=flat
-[size-badge]: https://img.badgesize.io/https://unpkg.com/bloom-css/bloom.css?compression=gzip&label=size
-
-<!-- URLs -->
-
-[bloom]: https://bloom.style
-[npm-package]: https://www.npmjs.com/package/bloom-css
+Read the full documentaion at **[bloom.style](https://bloom.style)**
