@@ -7,17 +7,17 @@
    * Modular scale
    * Applied as font-size
    */
-  --scale-000: 0.75rem;
-  --scale-00: 0.875rem;
-  --scale-0: 1rem;
-  --scale-1: 1.125rem;
-  --scale-2: 1.25rem;
-  --scale-3: 1.5rem;
-  --scale-4: 1.875rem;
-  --scale-5: 2.25rem;
-  --scale-6: 3rem;
-  --scale-7: 5rem;
-  --scale-8: 6rem;
+  --scale-000: 0.75rem; /* 12px */
+  --scale-00: 0.875rem; /* 14px */
+  --scale-0: 1rem;      /* 16px */
+  --scale-1: 1.125rem;  /* 18px */
+  --scale-2: 1.25rem;   /* 20px */
+  --scale-3: 1.5rem;    /* 24px */
+  --scale-4: 1.875rem;  /* 30px */
+  --scale-5: 2.25rem;   /* 36px */
+  --scale-6: 3rem;      /* 48px */
+  --scale-7: 5rem;      /* 80px */
+  --scale-8: 6rem;      /* 96px */
 
   /**
    * Fonts
