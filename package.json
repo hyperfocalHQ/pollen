@@ -3,6 +3,7 @@
   "version": "0.3.0",
   "description": "Funcaiontal CSS for the future",
   "main": "bloom.css",
+  "style": "bloom.css",
   "scripts": {
     "develop": "postcss 'src/**/*.css' --base src -d . -w",
     "build": "NODE_ENV=production postcss 'src/**/*.css' --base src -d .",
