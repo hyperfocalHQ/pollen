@@ -31,12 +31,12 @@
    * Leading
    * Applied as line-height
    */
-  --leading-0: 1;
-  --leading-1: 1.25;
-  --leading-2: 1.375;
-  --leading-3: 1.5;
-  --leading-4: 1.625;
-  --leading-5: 2;
+  --leading-none: 1;
+  --leading-xsmall: 1.25;
+  --leading-small: 1.375;
+  --leading-normal: 1.5;
+  --leading-large: 1.625;
+  --leading-xlarge: 2;
 
   /**
    * Tracking
@@ -56,7 +56,7 @@
    * Results in ~45/~66/~80 character measures
    */
   --measure-narrow: 20em;
-  --measure: 30em;
+  --measure-normal: 30em;
   --measure-wide: 34em;
 
   /**
