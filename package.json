@@ -1,22 +1,22 @@
 {
-  "name": "bloom-css",
+  "name": "pollen-css",
   "version": "0.3.0",
   "description": "Funcaiontal CSS for the future",
-  "main": "bloom.css",
-  "style": "bloom.css",
+  "main": "pollen.css",
+  "style": "pollen.css",
   "scripts": {
     "develop": "postcss 'src/**/*.css' --base src -d . -w",
     "build": "NODE_ENV=production postcss 'src/**/*.css' --base src -d .",
     "prepublishOnly": "npm run build",
-    "clean": "rm -rf ./bloom.css ./lib"
+    "clean": "rm -rf ./pollen.css ./lib"
   },
   "files": [
-    "/bloom.css",
+    "/pollen.css",
     "/lib/**/*"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/radioactivepesto/bloom.git"
+    "url": "git+https://github.com/radioactivepesto/pollen.git"
   },
   "keywords": [
     "css",
@@ -32,9 +32,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/radioactivepesto/bloom/issues"
+    "url": "https://github.com/radioactivepesto/pollen/issues"
   },
-  "homepage": "https://bloom.style",
+  "homepage": "https://pollen.style",
   "devDependencies": {
     "cssnano": "^4.1.10",
     "postcss-cli": "^7.1.1",

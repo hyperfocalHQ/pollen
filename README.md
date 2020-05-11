@@ -1,6 +1,6 @@
-# Bloom <br/> [![Version](https://img.shields.io/npm/v/bloom-css.svg?style=flat)](https://www.npmjs.com/package/bloom-css) ![Size](https://img.badgesize.io/https://unpkg.com/bloom-css/bloom.css?compression=gzip&label=size)
+# Pollen <br/> [![Version](https://img.shields.io/npm/v/pollen-css.svg?style=flat)](https://www.npmjs.com/package/pollen-css) ![Size](https://img.badgesize.io/https://unpkg.com/pollen-css/bloom.css?compression=gzip&label=size)
 
-Bloom is a future-facing, functional CSS microframework built on CSS variables. It helps you rapidly build custom interfaces and encourages consistency in production, as a foundation for your own design system.
+Pollen is a functional utility-first CSS framework built on CSS variables. It helps you rapidly build custom interfaces and encourages consistency as a foundation for your own design system.
 
 ```css
 .button {
@@ -18,20 +18,20 @@ Bloom is a future-facing, functional CSS microframework built on CSS variables. 
 }
 ```
 
-## Get Bloom
+## Get Pollen
 
-Install Bloom with NPM
+Install Pollen with NPM
 
 ```sh
-npm i bloom-css
+npm i pollen-css
 ```
 
 Or include it directly from the CDN
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/bloom-css/bloom.css" />
+<link rel="stylesheet" href="https://unpkg.com/pollen-css/pollen.css" />
 ```
 
 ## Documentation
 
-Read the full documentaion at **[bloom.style](https://bloom.style)**
+Read the full documentaion at **[pollen.style](https://pollen.style)**
