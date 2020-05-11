@@ -23,9 +23,9 @@
    * Fonts
    * Applied as font-family
    */
-  --font-sans: system-ui;
-  --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-mono: Consolas, Menlo, Monaco, "Liberation Mono", monospace;
+  --font-family-sans: system-ui;
+  --font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-family-mono: Consolas, Menlo, Monaco, "Liberation Mono", monospace;
 
   /**
    * Leading
