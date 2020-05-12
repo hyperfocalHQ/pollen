@@ -29,7 +29,7 @@ npm i pollen-css
 ```
 
 ```js
-import 'pollen-css'
+import 'pollen-css';
 ```
 
 Or include it directly from the Unpkg CDN
@@ -37,6 +37,20 @@ Or include it directly from the Unpkg CDN
 ```html
 <link rel="stylesheet" href="https://unpkg.com/pollen-css/pollen.css" />
 ```
+
+### Shimming IE
+
+Internet explorer doesn't support CSS variables, and Pollen ships with a lightweight, conditionally loaded shim that provides full support for IE.
+
+Use it by calling `shimmie()` from `pollen-css/utils` on your page
+
+```js
+import { shimmie } from 'pollen-css/utils';
+
+shimmie();
+```
+
+Shimmie will check for CSS variables support, and if required will dynamically load and apply the excellent [`css-vars-ponfyill`](https://jhildenbiddle.github.io/css-vars-ponyfill/#/) shim with sane configuration.
 
 ## Usage
 
