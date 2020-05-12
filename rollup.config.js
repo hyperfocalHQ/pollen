@@ -27,7 +27,9 @@ export default [
     },
     plugins: [
       resolve({ extensions: ['.ts'], browser: true }),
-      typescript(),
+      typescript({
+        tsconfig: './tsconfig.utils.json'
+      }),
       terser()
     ]
   }

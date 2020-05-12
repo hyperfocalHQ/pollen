@@ -8,10 +8,11 @@
     "develop": "rollup -c -w",
     "build": "NODE_ENV=production rollup -c",
     "prepublishOnly": "npm run build",
-    "clean": "rm -rf ./pollen.css"
+    "clean": "rm -rf ./pollen.css ./utils"
   },
   "files": [
-    "/pollen.css"
+    "/pollen.css",
+    "/utils"
   ],
   "repository": {
     "type": "git",
