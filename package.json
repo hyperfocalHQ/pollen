@@ -5,14 +5,13 @@
   "main": "pollen.css",
   "style": "pollen.css",
   "scripts": {
-    "develop": "postcss 'src/**/*.css' --base src -d . -w",
-    "build": "NODE_ENV=production postcss 'src/**/*.css' --base src -d .",
+    "develop": "rollup -c -w",
+    "build": "NODE_ENV=production rollup -c",
     "prepublishOnly": "npm run build",
-    "clean": "rm -rf ./pollen.css ./lib"
+    "clean": "rm -rf ./pollen.css"
   },
   "files": [
-    "/pollen.css",
-    "/lib/**/*"
+    "/pollen.css"
   ],
   "repository": {
     "type": "git",
@@ -36,14 +35,18 @@
   },
   "homepage": "https://pollen.style",
   "devDependencies": {
+    "@wessberg/rollup-plugin-ts": "^1.2.24",
     "cssnano": "^4.1.10",
-    "postcss-cli": "^7.1.1",
     "postcss-custom-media": "^7.0.8",
     "postcss-font-family-system-ui": "^4.2.0",
     "postcss-import": "^12.0.1",
     "postcss-nesting": "^7.0.1",
     "prettier": "^2.0.5",
+    "rollup": "^2.7.6",
+    "rollup-plugin-postcss": "^3.1.1",
     "stylelint": "^13.3.3",
-    "stylelint-config-recommended": "^3.0.0"
-  }
+    "stylelint-config-recommended": "^3.0.0",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {}
 }

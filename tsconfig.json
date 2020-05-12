@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "esnext",
+    "module": "esnext",
+
+    /* Type-Checking Options */
+    "strict": true,
+
+    /* Compiler options */
+    "removeComments": true,
+
+    /* Module resoltion */
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["./src/**/*", "./types/**/*"]
+}

@@ -1,6 +1,7 @@
 {
   "proseWrap": "never",
   "singleQuote": true,
+  "trailingComma": "none",
   "overrides": [
     {
       "files": ["*.css"],

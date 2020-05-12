@@ -3,7 +3,6 @@ node_modules
 
 # Dist
 /pollen.css
-/lib
 
 # Runtime
 .DS_Store
