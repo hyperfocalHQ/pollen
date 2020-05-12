@@ -1,2 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.shimmie=function(e){((window||{}).CSS||{}).supports&&window.CSS.supports("(--a: 0)")||(document.body.style.visibility="hidden",Promise.resolve().then((function(){return require("./css-vars-ponyfill.esm-7ce3baf7.js")})).then(({default:t})=>{t({watch:!0,updateURLs:!1,onComplete(){setTimeout(()=>document.body.style.visibility="visible",10)},...e})}))};
-//# sourceMappingURL=index.js.map
