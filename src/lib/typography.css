@@ -16,7 +16,8 @@
   --scale-4: 1.875rem; /* 30px */
   --scale-5: 2.25rem; /* 36px */
   --scale-6: 3rem; /* 48px */
-  --scale-7: 5rem; /* 80px */
+  --scale-6: 4rem; /* 64px */
+  --scale-7: 4.5rem; /* 72px */
   --scale-8: 6rem; /* 96px */
 
   /**
@@ -64,7 +65,7 @@
    * Applied as font-weight
    */
   --font-weight-light: 300;
-  --font-weight-default: 400;
+  --font-weight-regular: 400;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 }

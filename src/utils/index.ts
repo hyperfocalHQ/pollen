@@ -2,7 +2,7 @@
  * Conditionally load and apply a shim for CSS variables in IE
  * @param config Optional additional css-vars-ponyfill configuration
  */
-export function shimmie(config?: object) {
+export function shimmie(config?: object): void {
   const test =
     ((window || {}).CSS || {}).supports && window.CSS.supports('(--a: 0)');
 
