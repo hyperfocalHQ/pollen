@@ -30,6 +30,17 @@
   --font-family-mono: Consolas, Menlo, Monaco, "Liberation Mono", monospace;
 
   /**
+   * Weights
+   * Applied as font-weight
+   */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  /**
    * Leading
    * Applied as line-height
    */
@@ -51,6 +62,7 @@
   --tracking-2: 0.05em;
   --tracking-3: 0.1em;
   --tracking-4: 0.25em;
+  --tracking-5: 0.25em;
 
   /**
    * Measures
@@ -60,13 +72,4 @@
   --measure-narrow: 20em;
   --measure-normal: 30em;
   --measure-wide: 34em;
-
-  /**
-   * Weights
-   * Applied as font-weight
-   */
-  --font-weight-light: 300;
-  --font-weight-regular: 400;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
 }

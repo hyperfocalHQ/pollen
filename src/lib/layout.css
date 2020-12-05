@@ -8,51 +8,51 @@
    * Applied to sizing property
    * Eg: margin, padding, height
    */
-  --spacing-000: 0.5rem;
-  --spacing-00: 0.75rem;
-  --spacing-0: 1rem;
-  --spacing-1: 1.25rem;
-  --spacing-2: 2rem;
-  --spacing-3: 3rem;
-  --spacing-4: 4rem;
-  --spacing-5: 6rem;
-  --spacing-6: 8rem;
-  --spacing-7: 10rem;
-  --spacing-8: 12rem;
-  --spacing-9: 14rem;
-  --spacing-10: 16rem;
-  --spacing-11: 32rem;
-  --spacing-12: 48rem;
+  --spacing-000: 8px;
+  --spacing-00: 12px;
+  --spacing-0: 16px;
+  --spacing-1: 20px;
+  --spacing-2: 32px;
+  --spacing-3: 48px;
+  --spacing-4: 64px;
+  --spacing-5: 96px;
+  --spacing-6: 128px;
+  --spacing-7: 160px;
+  --spacing-8: 192px;
+  --spacing-9: 224px;
+  --spacing-10: 256px;
+  --spacing-11: 512px;
+  --spacing-12: 768px;
 
   /**
    * Widths
    * Applied as max-width
    */
-  --width-1: 20rem;
-  --width-2: 24rem;
-  --width-3: 28rem;
-  --width-4: 32rem;
-  --width-5: 36rem;
-  --width-6: 42rem;
-  --width-7: 48rem;
-  --width-8: 56rem;
-  --width-9: 64rem;
-  --width-10: 72rem;
-  --width-11: 80rem;
-  --width-12: 96rem;
+  --width-1: 320px;
+  --width-2: 396px;
+  --width-3: 448px;
+  --width-4: 512px;
+  --width-5: 576px;
+  --width-6: 672px;
+  --width-7: 768px;
+  --width-8: 896px;
+  --width-9: 1024px;
+  --width-10: 1152px;
+  --width-11: 1280px;
+  --width-12: 1440px;
 
   /**
    * Grid gaps
    * Applied as padding (flex grid) or grid-gap (CSS Grid)
    */
-  --gap-00: 0.75rem;
-  --gap-0: 1rem;
-  --gap-1: 1.5rem;
-  --gap-2: 2.5rem;
-  --gap-3: 3rem;
-  --gap-4: 4rem;
-  --gap-5: 6rem;
-  --gap-6: 8rem;
+  --gap-00: 12px;
+  --gap-0: 16px;
+  --gap-1: 24px;
+  --gap-2: 36px;
+  --gap-3: 48px;
+  --gap-4: 64px;
+  --gap-5: 96px;
+  --gap-6: 128px;
 
   /**
    * Grid gap offsets
