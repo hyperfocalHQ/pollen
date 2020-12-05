@@ -16,9 +16,10 @@
   --scale-4: 1.875rem; /* 30px */
   --scale-5: 2.25rem; /* 36px */
   --scale-6: 3rem; /* 48px */
-  --scale-6: 4rem; /* 64px */
-  --scale-7: 4.5rem; /* 72px */
-  --scale-8: 6rem; /* 96px */
+  --scale-7: 4rem; /* 64px */
+  --scale-8: 4.5rem; /* 72px */
+  --scale-9: 6rem; /* 96px */
+  --scale-10: 6rem; /* 96px */
 
   /**
    * Fonts
