@@ -1,8 +1,10 @@
 # Pollen <br/> [![Version](https://img.shields.io/npm/v/pollen-css.svg?style=flat)](https://www.npmjs.com/package/pollen-css) ![Size](https://img.badgesize.io/https://unpkg.com/pollen-css/pollen.css?compression=gzip&label=size)
 
-Pollen is a functional CSS library that provides a consistent foundation for modern design systems. It's featherweight, extensible, built on CSS variables, and ready for the future.
+Pollen is a collection of [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) designed for rapid prototyping, consistent styling, and as a [utility-first](https://frontstuff.io/in-defense-of-utility-first-css) foundation for your own design systems.
 
-#### What it looks like
+## What it looks like
+
+Pollen has no buildstep, class naming conventions, or framework gotchas. It works in stylesheets, inline styles, and CSS-in-JS.
 
 ```css
 .button {
@@ -14,43 +16,50 @@ Pollen is a functional CSS library that provides a consistent foundation for mod
   box-shadow: var(--elevation-1);
   transition: background 150ms var(--easing-standard);
 }
-
-.button:hover {
-  background: var(--color-blue-700);
-}
 ```
+
+## Modules
+
+- [Typography system](modules/typography.md)
+- [Color palette](modules/colors.md)
+- [Layout scales](modules/layout.md)
+- [UI library](modules/layout.md)
 
 ## Installation
 
-Install Pollen with NPM, and either import it with your bundler of choice.
+Install Pollen from NPM and include it in your project
 
-```sh
+```bash
 npm i pollen-css
 ```
 
-```js
+```javascript
 import 'pollen-css';
 ```
 
-Or include it directly from the Unpkg CDN
+#### Alternatively include from a CDN
 
-```html
+You can also link Pollen's CSS directly from the Unpkg CDN
+
+```markup
 <link rel="stylesheet" href="https://unpkg.com/pollen-css/pollen.css" />
 ```
 
-### Shimming IE
+The entire library weighs **under** **1.5kb**, so there's no need to worry about how you bundle or optimise it.
 
-Internet explorer doesn't support CSS variables, and Pollen ships with a lightweight, conditionally loaded shim that provides full support for IE.
+## Shimming IE
 
-Use it by calling `shimmie()` from `pollen-css/utils` on your page
+Pollen requires a small shim to work in Internet Explorer, as it doesn't support the CSS variables that the library is built on.
 
-```js
+Enable IE support with the included `shimmie` utility from `pollen-css/utils`
+
+```javascript
 import { shimmie } from 'pollen-css/utils';
 
 shimmie();
 ```
 
-Shimmie will check for CSS variables support, and if required will dynamically load and apply the excellent [`css-vars-ponfyill`](https://jhildenbiddle.github.io/css-vars-ponyfill/#/) shim with sane configuration.
+Shimmie will check for support, and if required dynamically load and apply the excellent [`css-vars-ponfyill`](https://jhildenbiddle.github.io/css-vars-ponyfill/#/) shim with sane configuration.
 
 ## Usage
 
