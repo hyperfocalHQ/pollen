@@ -20,10 +20,10 @@ Pollen has no buildstep, class naming conventions, or framework gotchas. It work
 
 ## Modules
 
-- [Typography system](modules/typography.md)
-- [Color palette](modules/colors.md)
-- [Layout scales](modules/layout.md)
-- [UI library](modules/layout.md)
+- [Typography system](https://www.pollen.style/modules/typography)
+- [Color palette](https://www.pollen.style/modules/colors)
+- [Layout scales](https://www.pollen.style/modules/layout)
+- [UI library](https://www.pollen.style/modules/ui)
 
 ## Installation
 
@@ -63,4 +63,4 @@ Shimmie will check for support, and if required dynamically load and apply the e
 
 ## Usage
 
-Read the full documentaion at **[pollen.style](https://pollen.style)**
+Read the full documentaion at **[pollen.style](https://www.pollen.style)**
