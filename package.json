@@ -16,7 +16,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/radioactivepesto/pollen.git"
+    "url": "git+https://github.com/peppercornstudio/pollen.git"
   },
   "keywords": [
     "css",
@@ -27,14 +27,14 @@
     "design-system"
   ],
   "author": {
-    "name": "Radioactive Pesto",
-    "url": "https://radioactivepesto.com"
+    "name": "Peppercorn Studio",
+    "url": "https://peppercornstudio.com"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/radioactivepesto/pollen/issues"
+    "url": "https://github.com/peppercornstudio/pollen/issues"
   },
-  "homepage": "https://pollen.style",
+  "homepage": "https://www.pollen.style",
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^7.1.3",
     "@wessberg/rollup-plugin-ts": "^1.2.24",
