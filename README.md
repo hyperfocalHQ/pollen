@@ -9,6 +9,7 @@ Pollen has no buildstep, class naming conventions, or framework gotchas. It work
 ```css
 .button {
   font: var(--font-sans);
+  font-weight: var(--font-medium);
   padding: var(--size-1);
   background: var(--color-blue);
   color: white;
