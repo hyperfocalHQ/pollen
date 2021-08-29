@@ -1,10 +1,10 @@
 # Pollen <br/> [![Version](https://img.shields.io/npm/v/pollen-css.svg?style=flat)](https://www.npmjs.com/package/pollen-css) ![Size](https://img.badgesize.io/https://unpkg.com/pollen-css/pollen.css?compression=gzip&label=size)
 
-Pollen is a collection of [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) designed for rapid prototyping, consistent styling, and as a [utility-first](https://frontstuff.io/in-defense-of-utility-first-css) foundation for your own design systems.
+Pollen is a library of [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) for rapid prototyping, consistent styling, and as a [utility-first](https://frontstuff.io/in-defense-of-utility-first-css) foundation for your own design systems. Heavily inspired by [TailwindCSS](https://tailwindcss.com).
 
 ## What it looks like
 
-Pollen has no buildstep, class naming conventions, or framework gotchas. It works in stylesheets, inline styles, and CSS-in-JS.
+Pollen has no buildstep, class naming conventions, or framework dependencies. It works in stylesheets, inline styles, and CSS-in-JS.
 
 ```css
 .button {
@@ -46,7 +46,7 @@ You can also link Pollen's CSS directly from the Unpkg CDN
 <link rel="stylesheet" href="https://unpkg.com/pollen-css/pollen.css" />
 ```
 
-The entire library weighs **under 1.5kb**, so there's no need to worry about how you bundle or optimise it.
+The entire library weighs **under 1.5kb** and has zero runtime, so there's nothing to optimise.
 
 ## Shimming IE
 
