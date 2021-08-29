@@ -9,7 +9,7 @@ Pollen has no buildstep, class naming conventions, or framework gotchas. It work
 ```css
 .button {
   font: var(--font-sans);
-  padding: var(--spacing-1);
+  padding: var(--size-1);
   background: var(--color-blue);
   color: white;
   border-radius: var(--radius-2);
@@ -22,8 +22,8 @@ Pollen has no buildstep, class naming conventions, or framework gotchas. It work
 
 - [Typography system](https://www.pollen.style/modules/typography)
 - [Color palette](https://www.pollen.style/modules/colors)
-- [Layout scales](https://www.pollen.style/modules/layout)
-- [UI library](https://www.pollen.style/modules/ui)
+- [Layout](https://www.pollen.style/modules/layout)
+- [UI constants](https://www.pollen.style/modules/ui)
 
 ## Installation
 
@@ -45,7 +45,7 @@ You can also link Pollen's CSS directly from the Unpkg CDN
 <link rel="stylesheet" href="https://unpkg.com/pollen-css/pollen.css" />
 ```
 
-The entire library weighs **under** **1.5kb**, so there's no need to worry about how you bundle or optimise it.
+The entire library weighs **under 1.5kb**, so there's no need to worry about how you bundle or optimise it.
 
 ## Shimming IE
 
