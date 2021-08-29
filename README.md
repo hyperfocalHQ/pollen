@@ -62,6 +62,21 @@ shimmie();
 
 Shimmie will check for support, and if required dynamically load and apply the excellent [`css-vars-ponfyill`](https://jhildenbiddle.github.io/css-vars-ponyfill/#/) shim with sane configuration.
 
+## Editor Support
+
+For autocomplete support of all of Pollen's variables in VS Code:
+
+1. Install the [CSS Variable Autocomplete](https://marketplace.visualstudio.com/items?itemName=vunguyentuan.vscode-css-variables) extension
+2. Add Pollen to the extensions lookup files in `.vscode/settings.json`
+
+```json
+{
+  "cssVariables.lookupFiles": ["node_modules/pollen-css/pollen.css"]
+}
+```
+
+Autocomplete will then be available for all properties. Begin typing the property name without `var(`, eg: `font-size: scale...` and intellisense will do the rest.
+
 ## Usage
 
 Read the full documentaion at **[pollen.style](https://www.pollen.style)**
