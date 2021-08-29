@@ -5,65 +5,84 @@
 :root {
   /**
    * Size scale
-   * Applied to sizing property
-   * Eg: margin, padding, height
+   * Applied to sizing properties
+   * Eg: margin, padding, width, height
    */
-  --spacing-000: 8px;
-  --spacing-00: 12px;
-  --spacing-0: 16px;
-  --spacing-1: 20px;
-  --spacing-2: 32px;
-  --spacing-3: 48px;
-  --spacing-4: 64px;
-  --spacing-5: 96px;
-  --spacing-6: 128px;
-  --spacing-7: 160px;
-  --spacing-8: 192px;
-  --spacing-9: 224px;
-  --spacing-10: 256px;
-  --spacing-11: 512px;
-  --spacing-12: 768px;
+  --size-0: 0px;
+  --size-px: 1px;
+  --size-1: 0.25rem;
+  --size-2: 0.5rem;
+  --size-3: 0.75rem;
+  --size-4: 1rem;
+  --size-5: 1.25rem;
+  --size-6: 1.5rem;
+  --size-7: 1.75rem;
+  --size-8: 2rem;
+  --size-9: 2.25rem;
+  --size-10: 2.5rem;
+  --size-11: 2.75rem;
+  --size-12: 3rem;
+  --size-14: 3.5rem;
+  --size-16: 4rem;
+  --size-20: 5rem;
+  --size-24: 6rem;
+  --size-28: 7rem;
+  --size-32: 8rem;
+  --size-36: 9rem;
+  --size-40: 10rem;
+  --size-44: 11rem;
+  --size-48: 12rem;
+  --size-52: 13rem;
+  --size-56: 14rem;
+  --size-60: 15rem;
+  --size-64: 16rem;
+  --size-72: 18rem;
+  --size-80: 20rem;
+  --size-96: 24rem;
+  --size-1/2: 50%;
+  --size-1/3: 33.333333%;
+  --size-2/3: 66.666667%;
+  --size-1/4: 25%;
+  --size-2/4: 50%;
+  --size-3/4: 75%;
+  --size-1/5: 20%;
+  --size-2/5: 40%;
+  --size-3/5: 60%;
+  --size-4/5: 80%;
+  --size-1/6: 16.666667%;
+  --size-2/6: 33.333333%;
+  --size-3/6: 50%;
+  --size-4/6: 66.666667%;
+  --size-5/6: 83.333333%;
+  --size-1/12: 8.333333%;
+  --size-2/12: 16.666667%;
+  --size-3/12: 25%;
+  --size-4/12: 33.333333%;
+  --size-5/12: 41.666667%;
+  --size-6/12: 50%;
+  --size-7/12: 58.333333%;
+  --size-8/12: 66.666667%;
+  --size-9/12: 75%;
+  --size-10/12: 83.333333%;
+  --size-11/12: 91.666667%;
+  --size-full: 100%;
+  --size-screen: 100vw;
+  --size-min: min-content;
+  --size-max: max-content;
 
   /**
    * Widths
    * Applied as max-width
    */
-  --width-1: 320px;
-  --width-2: 396px;
-  --width-3: 448px;
-  --width-4: 512px;
-  --width-5: 576px;
-  --width-6: 672px;
-  --width-7: 768px;
-  --width-8: 896px;
-  --width-9: 1024px;
-  --width-10: 1152px;
-  --width-11: 1280px;
-  --width-12: 1440px;
-
-  /**
-   * Grid gaps
-   * Applied as padding (flex grid) or grid-gap (CSS Grid)
-   */
-  --gap-00: 12px;
-  --gap-0: 16px;
-  --gap-1: 24px;
-  --gap-2: 36px;
-  --gap-3: 48px;
-  --gap-4: 64px;
-  --gap-5: 96px;
-  --gap-6: 128px;
-
-  /**
-   * Grid gap offsets
-   * Applied as negative margin in flex grids
-   */
-  --gap-offset-00: calc(0px - var(--gap-00));
-  --gap-offset-0: calc(0px - var(--gap-0));
-  --gap-offset-1: calc(0px - var(--gap-1));
-  --gap-offset-2: calc(0px - var(--gap-2));
-  --gap-offset-3: calc(0px - var(--gap-3));
-  --gap-offset-4: calc(0px - var(--gap-4));
-  --gap-offset-5: calc(0px - var(--gap-5));
-  --gap-offset-6: calc(0px - var(--gap-6));
+  --width-xs: 20rem;
+  --width-sm: 24rem;
+  --width-md: 28rem;
+  --width-lg: 32rem;
+  --width-xl: 36rem;
+  --width-2xl: 42rem;
+  --width-3xl: 48rem;
+  --width-4xl: 56rem;
+  --width-5xl: 64rem;
+  --width-6xl: 72rem;
+  --width-7xl: 80rem;
 }

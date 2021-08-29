@@ -6,20 +6,13 @@
   /**
    * Elevation
    * Applied as box-shadow
-   * Inspired by Material Design https://material.io/design/environment/elevation.html
    */
-  --elevation-1: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  --elevation-2: 0 3px 4px 0 rgba(0, 0, 0, 0.14),
-    0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
-  --elevation-3: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
-    0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-  --elevation-4: 0 6px 10px 0 rgba(0, 0, 0, 0.14),
-    0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
-  --elevation-5: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
-    0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
-  --elevation-6: 0 16px 24px 2px rgba(0, 0, 0, 0.14),
-    0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  --elevation-1: 0 1px 2px 0 rgba(0, 0, 0, 0.05),
+  --elevation-2: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06),
+  --elevation-3: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06),
+  --elevation-4: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05),
+  --elevation-5: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04),
+  --elevation-6: 0 25px 50px -12px rgba(0, 0, 0, 0.25),
 
   /**
    * Motion easing curves
@@ -33,15 +26,16 @@
   /**
    * Radiuses
    * Applied as border-radius
-   * Relative to font size of content
    */
-  --radius-1: 0.2em;
-  --radius-2: 0.375em;
-  --radius-3: 0.5em;
-  --radius-4: 0.8em;
-  --radius-5: 1em;
-  --radius-6: 1.25em;
-  --radius-round: 9999px;
+  --radius-none: 0px;
+  --radius-sm: 0.125rem;
+  --radius: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-full: 9999px;
 
   /**
    * Layers
@@ -52,6 +46,5 @@
   --layer-3: 30;
   --layer-4: 40;
   --layer-5: 50;
-  --layer-6: 60;
   --layer-top: 2147483647;
 }

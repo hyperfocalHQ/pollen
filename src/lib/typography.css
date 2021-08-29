@@ -25,31 +25,31 @@
    * Fonts
    * Applied as font-family
    */
-  --font-family-sans: system-ui;
-  --font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-family-mono: Consolas, Menlo, Monaco, "Liberation Mono", monospace;
+  --font-sans: system-ui;
+  --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: Consolas, Menlo, Monaco, "Liberation Mono", monospace;
 
   /**
    * Weights
    * Applied as font-weight
    */
-  --font-weight-light: 300;
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-  --font-weight-black: 900;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-black: 900;
 
   /**
    * Leading
    * Applied as line-height
    */
   --leading-none: 1;
-  --leading-xsmall: 1.125;
-  --leading-small: 1.275;
+  --leading-xsm: 1.125;
+  --leading-sm: 1.275;
   --leading-normal: 1.5;
-  --leading-large: 1.625;
-  --leading-xlarge: 2;
+  --leading-lg: 1.625;
+  --leading-xl: 2;
 
   /**
    * Tracking
@@ -61,8 +61,6 @@
   --tracking-1: 0.025em;
   --tracking-2: 0.05em;
   --tracking-3: 0.1em;
-  --tracking-4: 0.25em;
-  --tracking-5: 0.25em;
 
   /**
    * Measures
