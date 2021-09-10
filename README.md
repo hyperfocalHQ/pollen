@@ -66,17 +66,22 @@ Shimmie will check for support, and if required dynamically load and apply the e
 
 For autocomplete support of all of Pollen's variables in VS Code:
 
-1. Install the [CSS Variable Autocomplete](https://marketplace.visualstudio.com/items?itemName=vunguyentuan.vscode-css-variables) extension
-2. Add Pollen to the extensions lookup files in `.vscode/settings.json`
+1. Install the [CSS Var Complete](https://marketplace.visualstudio.com/items?itemName=phoenisx.cssvar) extension
+2. Add Pollen to the extension's file settings in `.vscode/settings.json`
+3. If you're using CSS-in-JS make sure you add `javascript`/`javascriptreact`/`typescriptreact` file support to the extension's settings
 
-```json
+```javascript
 {
-  "cssVariables.lookupFiles": ["node_modules/pollen-css/pollen.css"]
+  "cssvar.files": [
+    "./node_modules/pollen-css/pollen.css"
+  ],
+  
+  // CSS-in-JS support
+  "cssvar.extensions": ["css", "javascript", "typescriptreact"] 
 }
 ```
 
-Autocomplete will then be available for all properties. Begin typing the property name without `var(`, eg: `font-size: scale...` and intellisense will do the rest.
-
+Autocomplete will then be available for all properties. Intellisense will trigger simply with `--`, no need to also add `var(`.
 ## Usage
 
 Read the full documentaion at **[pollen.style](https://www.pollen.style)**
