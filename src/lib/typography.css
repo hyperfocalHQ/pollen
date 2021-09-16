@@ -55,8 +55,8 @@
    * Tracking
    * Applied as letter-spacing
    */
-  --tracking-000: -0.05em;
-  --tracking-00: -0.025em;
+  --tracking-000: -0.025em;
+  --tracking-00: -0.05em;
   --tracking-0: 0;
   --tracking-1: 0.025em;
   --tracking-2: 0.05em;
