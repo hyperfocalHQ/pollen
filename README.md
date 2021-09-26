@@ -8,16 +8,19 @@ Pollen has no buildstep, class naming conventions, or framework dependencies. It
 
 ```css
 .button {
-  font: var(--font-sans);
+  font-family: var(--font-sans);
+  font-size: var(--scale-00);
   font-weight: var(--font-medium);
-  padding: var(--size-1);
+  padding: var(--size-2) var(--size-3);
   background: var(--color-blue);
   color: white;
-  border-radius: var(--radius-2);
-  box-shadow: var(--elevation-1);
-  transition: background 150ms var(--easing-standard);
+  border-radius: var(--radius);
+  box-shadow: var(--elevation-2);
 }
 ```
+
+<button style="all: unset; font-family: sans-serif; font-size:
+0.875rem; font-weight: 500; padding: 8px 12px; background: #4299e1; color: white; border-radius: 4px; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); cursor: pointer;">Button</button>
 
 ## Modules
 
