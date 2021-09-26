@@ -46,7 +46,7 @@ You can also link Pollen's CSS directly from the Unpkg CDN
 <link rel="stylesheet" href="https://unpkg.com/pollen-css/pollen.css" />
 ```
 
-The entire library weighs **under 1.5kb** and has zero runtime, so there's nothing to optimise.
+The entire library weighs under 1.3kb and has zero runtime, so there's nothing to optimise.
 
 ## Shimming IE
 
@@ -75,9 +75,9 @@ For autocomplete support of all of Pollen's variables in VS Code:
   "cssvar.files": [
     "./node_modules/pollen-css/pollen.css"
   ],
-  
+
   // CSS-in-JS support
-  "cssvar.extensions": ["css", "javascript", "typescriptreact"] 
+  "cssvar.extensions": ["css", "javascript", "typescriptreact"]
 }
 ```
 
