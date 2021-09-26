@@ -19,9 +19,6 @@ Pollen has no buildstep, class naming conventions, or framework dependencies. It
 }
 ```
 
-<button style="all: unset; font-family: sans-serif; font-size:
-0.875rem; font-weight: 500; padding: 8px 12px; background: #4299e1; color: white; border-radius: 4px; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); cursor: pointer;">Button</button>
-
 ## Modules
 
 - [Typography system](https://www.pollen.style/modules/typography)
