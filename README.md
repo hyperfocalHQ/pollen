@@ -2,6 +2,8 @@
 
 Pollen is a library of [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) for rapid prototyping, consistent styling, and as a [utility-first](https://frontstuff.io/in-defense-of-utility-first-css) foundation for your own design systems. Heavily inspired by [TailwindCSS](https://tailwindcss.com).
 
+> ‼️ Pollen v3 is in active development, I'd love your input on some of the changes we're considering [here](https://github.com/peppercornstudio/pollen/issues/34)
+
 ## What it looks like
 
 Pollen has no buildstep, class naming conventions, or framework dependencies. It works in stylesheets, inline styles, and CSS-in-JS.
