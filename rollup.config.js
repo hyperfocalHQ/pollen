@@ -1,23 +1,36 @@
-import path from 'path';
-import typescript from '@wessberg/rollup-plugin-ts';
-import postcss from 'rollup-plugin-postcss';
+import multi from '@rollup/plugin-multi-entry';
 import resolve from '@rollup/plugin-node-resolve';
+import typescript from '@wessberg/rollup-plugin-ts';
+import glob from 'fast-glob';
+import postcss from 'rollup-plugin-postcss';
 import { terser } from 'rollup-plugin-terser';
 
 export default [
   {
-    input: 'src/index.ts',
+    input: 'src/core/*.css',
     output: {
       file: 'pollen.css',
       format: 'es'
     },
     plugins: [
-      typescript(),
+      multi(),
       postcss({
-        extract: path.resolve('pollen.css')
+        extract: true
       })
     ]
   },
+  ...glob.sync('src/addons/*.css').map((file) => ({
+    input: file,
+    output: {
+      file: `addons/${file.split('/').pop()}`,
+      format: 'es'
+    },
+    plugins: [
+      postcss({
+        extract: true
+      })
+    ]
+  })),
   {
     input: 'src/utils/index.ts',
     output: {
@@ -27,9 +40,7 @@ export default [
     },
     plugins: [
       resolve({ extensions: ['.ts'], browser: true }),
-      typescript({
-        tsconfig: './tsconfig.utils.json'
-      }),
+      typescript(),
       terser()
     ]
   }

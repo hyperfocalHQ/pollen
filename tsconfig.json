@@ -9,6 +9,7 @@
 
     /* Compiler options */
     "removeComments": true,
+    "declaration": true,
 
     /* Module resoltion */
     "moduleResolution": "node",

@@ -65,7 +65,6 @@
   /**
    * Measures
    * Applied as max-width
-   * Results in 45/65/80 character measures
    */
   --measure-narrow: 45ch;
   --measure-normal: 65ch;
