@@ -2,7 +2,7 @@
 
 Pollen is a library of [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) for rapid prototyping, consistent styling, and as a [utility-first](https://frontstuff.io/in-defense-of-utility-first-css) foundation for your own design systems. Heavily inspired by [TailwindCSS](https://tailwindcss.com).
 
-> ‼️ Pollen v3 is in active development, I'd love your input on some of the changes we're considering [here](https://github.com/peppercornstudio/pollen/issues/34)
+> ‼️ Pollen v3 is in active development, and we're looking for input on [changes under consideration](https://github.com/peppercornstudio/pollen/issues/34)!
 
 ## What it looks like
 
@@ -44,7 +44,7 @@ import 'pollen-css';
 
 You can also link Pollen's CSS directly from the Unpkg CDN
 
-```markup
+```html
 <link rel="stylesheet" href="https://unpkg.com/pollen-css/pollen.css" />
 ```
 
