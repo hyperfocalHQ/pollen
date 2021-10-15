@@ -30,20 +30,21 @@
    * Radiuses
    * Applied as border-radius
    */
-  --radius-none: 0px;
-  --radius-sm: 2px;
-  --radius: 4px;
-  --radius-md: 6px;
-  --radius-lg: 8px;
-  --radius-xl: 12px;
-  --radius-2xl: 16px;
-  --radius-3xl: 24px;
+  --radius-0: 0px;
+  --radius-1: 2px;
+  --radius-2: 4px;
+  --radius-3: 6px;
+  --radius-4: 8px;
+  --radius-5: 12px;
+  --radius-6: 16px;
   --radius-full: 9999px;
 
   /**
    * Layers
    * Applied as z-index
    */
+  --layer-below: -1;
+  --layer-0: 0;
   --layer-1: 10;
   --layer-2: 20;
   --layer-3: 30;

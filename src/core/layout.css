@@ -48,15 +48,16 @@
    * Widths
    * Applied as max-width
    */
-  --width-xs: 320px;
-  --width-sm: 384px;
-  --width-md: 448px;
-  --width-lg: 512px;
-  --width-xl: 576px;
-  --width-2xl: 672px;
-  --width-3xl: 768px;
-  --width-4xl: 896px;
-  --width-5xl: 1024px;
-  --width-6xl: 1152px;
-  --width-7xl: 1280px;
+  --width-1: 320px;
+  --width-2: 384px;
+  --width-3: 448px;
+  --width-4: 512px;
+  --width-5: 576px;
+  --width-6: 672px;
+  --width-7: 768px;
+  --width-8: 896px;
+  --width-9: 1024px;
+  --width-10: 1152px;
+  --width-11: 1280px;
+  --width-12: 1440px;
 }
