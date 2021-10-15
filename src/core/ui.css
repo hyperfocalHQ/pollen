@@ -30,7 +30,6 @@
    * Radiuses
    * Applied as border-radius
    */
-  --radius-0: 0px;
   --radius-1: 2px;
   --radius-2: 4px;
   --radius-3: 6px;
@@ -44,7 +43,6 @@
    * Applied as z-index
    */
   --layer-below: -1;
-  --layer-0: 0;
   --layer-1: 10;
   --layer-2: 20;
   --layer-3: 30;
