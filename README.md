@@ -1,12 +1,10 @@
 # Pollen <br/> [![Version](https://img.shields.io/npm/v/pollen-css.svg?style=flat)](https://www.npmjs.com/package/pollen-css) ![Size](https://img.badgesize.io/https://unpkg.com/pollen-css/pollen.css?compression=gzip&label=size)
 
-Pollen is a library of [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) for rapid prototyping, consistent styling, and as a [utility-first](https://frontstuff.io/in-defense-of-utility-first-css) foundation for your own design systems. Heavily inspired by [TailwindCSS](https://tailwindcss.com).
-
-> ‼️ Pollen v3 is in active development, and we're looking for input on [changes under consideration](https://github.com/peppercornstudio/pollen/issues/34)!
+Pollen is a functional alternative to [Tailwind](https://tailwindcss.com) that doesn't overload class names or reinvent CSS. It's a library of [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) that encourages consistency and maintainability, as a utility-first foundation for your own design system.
 
 ## What it looks like
 
-Pollen has no buildstep, class naming conventions, or framework dependencies. It works in stylesheets, inline styles, and CSS-in-JS.
+Pollen's low-level variables can be used to build any design. It works anywhere and has no buildstep or class naming conventions. It's easily to extend and globally responsive, without introducing preprocessors or any new syntax.
 
 ```css
 .button {
@@ -21,71 +19,6 @@ Pollen has no buildstep, class naming conventions, or framework dependencies. It
 }
 ```
 
-## Modules
-
-- [Typography system](https://www.pollen.style/modules/typography)
-- [Color palette](https://www.pollen.style/modules/colors)
-- [Layout](https://www.pollen.style/modules/layout)
-- [UI constants](https://www.pollen.style/modules/ui)
-
-## Installation
-
-Install Pollen from NPM and include it in your project
-
-```bash
-npm i pollen-css
-```
-
-```javascript
-import 'pollen-css';
-```
-
-#### Alternatively include from a CDN
-
-You can also link Pollen's CSS directly from the Unpkg CDN
-
-```html
-<link rel="stylesheet" href="https://unpkg.com/pollen-css/pollen.css" />
-```
-
-The entire library weighs under 1.3kb and has zero runtime, so there's nothing to optimise.
-
-## Shimming IE
-
-Pollen requires a small shim to work in Internet Explorer, as it doesn't support the CSS variables that the library is built on.
-
-Enable IE support with the included `shimmie` utility from `pollen-css/utils`
-
-```javascript
-import { shimmie } from 'pollen-css/utils';
-
-shimmie();
-```
-
-Shimmie will check for support, and if required dynamically load and apply the excellent [`css-vars-ponfyill`](https://jhildenbiddle.github.io/css-vars-ponyfill/#/) shim with sane configuration.
-
-## Editor Support
-
-For autocomplete support of all of Pollen's variables in VS Code:
-
-1. Install the [CSS Var Complete](https://marketplace.visualstudio.com/items?itemName=phoenisx.cssvar) extension
-2. Add Pollen to the extension's file settings in `.vscode/settings.json`
-3. Enable "no_sort" to sort variables as they are defined
-4. If you're using CSS-in-JS make sure you add `javascript`/`javascriptreact`/`typescriptreact` file support to the extension's settings
-
-```javascript
-{
-  "cssvar.files": [
-    "./node_modules/pollen-css/pollen.css"
-  ],
-  "cssvar.unstable": ["no_sort"],
-  
-  // CSS-in-JS support
-  "cssvar.extensions": ["css", "javascript", "typescriptreact"]
-}
-```
-
-Autocomplete will then be available for all properties. Intellisense will trigger simply with `--`, no need to also add `var(`.
-## Usage
+## Documentation
 
 Read the full documentaion at **[pollen.style](https://www.pollen.style)**
