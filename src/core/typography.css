@@ -45,22 +45,60 @@
    * Applied as line-height
    */
   --leading-none: 1;
+  --leading-tighter: 1.125;
+  --leading-tight: 1.275;
+  --leading-normal: 1.5;
+  --leading-loose: 1.625;
+  --leading-looser: 2;
+
+  --leading-none: 1;
   --leading-xs: 1.125;
   --leading-sm: 1.275;
-  --leading-normal: 1.5;
+  --leading-med: 1.5;
   --leading-lg: 1.625;
   --leading-xl: 2;
+
+  --line-none: 1;
+  --line-tighter: 1.125;
+  --line-tight: 1.275;
+  --line-normal: 1.5;
+  --line-loose: 1.625;
+  --line-looser: 2;
+
+  --line-none: 1;
+  --line-xs: 1.125;
+  --line-sm: 1.275;
+  --line-med: 1.5;
+  --line-lg: 1.625;
+  --line-xl: 2;
 
   /**
    * Tracking
    * Applied as letter-spacing
    */
-  --tracking-000: -0.025em;
-  --tracking-00: -0.05em;
-  --tracking-0: 0;
-  --tracking-1: 0.025em;
-  --tracking-2: 0.05em;
-  --tracking-3: 0.1em;
+  --tracking-tighter: -0.05em;
+  --tracking-tight: -0.025em;
+  --tracking-none: 0em;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+
+  --tracking-xs: -0.05em;
+  --tracking-sm: -0.025em;
+  --tracking-none: 0em;
+  --tracking-lg: 0.025em;
+  --tracking-xl: 0.05em;
+
+  --letter-tighter: -0.05em;
+  --letter-tight: -0.025em;
+  --letter-none: 0em;
+  --letter-wide: 0.025em;
+  --letter-wider: 0.05em;
+
+  --letter-xs: -0.05em;
+  --letter-sm: -0.025em;
+  --letter-none: 0em;
+  --letter-lg: 0.025em;
+  --letter-xl: 0.05em;
 
   /**
    * Measures
@@ -69,4 +107,8 @@
   --measure-narrow: 45ch;
   --measure-normal: 65ch;
   --measure-wide: 80ch;
+
+  --measure-sm: 45ch;
+  --measure-med: 65ch;
+  --measure-lg: 80ch;
 }
