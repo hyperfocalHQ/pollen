@@ -70,14 +70,16 @@ For autocomplete support of all of Pollen's variables in VS Code:
 
 1. Install the [CSS Var Complete](https://marketplace.visualstudio.com/items?itemName=phoenisx.cssvar) extension
 2. Add Pollen to the extension's file settings in `.vscode/settings.json`
-3. If you're using CSS-in-JS make sure you add `javascript`/`javascriptreact`/`typescriptreact` file support to the extension's settings
+3. Enable "no_sort" to sort variables as they are defined
+4. If you're using CSS-in-JS make sure you add `javascript`/`javascriptreact`/`typescriptreact` file support to the extension's settings
 
 ```javascript
 {
   "cssvar.files": [
     "./node_modules/pollen-css/pollen.css"
   ],
-
+  "cssvar.unstable": ["no_sort"],
+  
   // CSS-in-JS support
   "cssvar.extensions": ["css", "javascript", "typescriptreact"]
 }
