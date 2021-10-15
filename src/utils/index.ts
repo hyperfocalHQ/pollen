@@ -2,7 +2,7 @@
  * Conditionally load and apply a shim for CSS variables in IE
  * @param config Optional additional css-vars-ponyfill configuration
  */
-export function shimmie(config?: object): void {
+export function shimmie({ onComplete, ...config }: any): void {
   const test =
     ((window || {}).CSS || {}).supports && window.CSS.supports('(--a: 0)');
 
@@ -13,7 +13,8 @@ export function shimmie(config?: object): void {
         watch: true,
         updateURLs: false,
         onComplete() {
-          setTimeout(() => (document.body.style.visibility = 'visible'), 1);
+          onComplete && onComplete();
+          document.body.style.visibility = 'visible';
         },
         ...config
       });
