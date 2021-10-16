@@ -1,6 +1,6 @@
 # Pollen <br/> [![Version](https://img.shields.io/npm/v/pollen-css.svg?style=flat)](https://www.npmjs.com/package/pollen-css) ![Size](https://img.badgesize.io/https://unpkg.com/pollen-css/pollen.css?compression=gzip&label=size)
 
-Pollen is a functional alternative to [Tailwind](https://tailwindcss.com) that doesn't overload class names or reinvent CSS. It's a library of [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) that encourages consistency and maintainability, as a utility-first foundation for your own design system.
+Pollen is a modern alternative to [Tailwind](https://tailwindcss.com) that doesn't reinvent CSS. It's a library of [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) that encourages consistency and maintainability, as a utility-first foundation for your own design system.
 
 ## What it looks like
 
