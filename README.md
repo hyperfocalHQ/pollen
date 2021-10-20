@@ -41,4 +41,4 @@ Pollen's low-level variables can be used to build any design. They work anywhere
 
 ## Documentation
 
-Read the full documentaion at **[pollen.style](https://www.pollen.style)**
+Read the full documentation at **[pollen.style](https://www.pollen.style)**
