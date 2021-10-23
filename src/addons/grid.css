@@ -6,11 +6,11 @@
    * Page Grid
    * Applied to grid-template-columns
    */
-  --grid-page-width: var(--width-11);
+  --grid-page-width: var(--width-xl);
   --grid-page-gutter: 5vw;
   --grid-page-main: 2 / 3;
-  --grid-page: minmax(var(--page-gutter), 1fr)
-    minmax(0, var(--content-max-width)) minmax(var(--page-gutter), 1fr);
+  --grid-page: minmax(var(--grid-page-gutter), 1fr)
+    minmax(0, var(--grid-page-width)) minmax(var(--grid-page-gutter), 1fr);
 
   /**
    * Template Shorthands
