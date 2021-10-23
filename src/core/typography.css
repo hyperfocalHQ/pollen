@@ -50,6 +50,13 @@
   --line-loose: 1.625;
   --line-looser: 2;
 
+  --line-none: 1;
+  --line-xs: 1.125;
+  --line-sm: 1.275;
+  --line-md: 1.5;
+  --line-lg: 1.625;
+  --line-xl: 2;
+
   /**
    * Tracking
    * Applied as letter-spacing
@@ -60,6 +67,12 @@
   --letter-wide: 0.025em;
   --letter-wider: 0.05em;
 
+  --letter-xs: -0.05em;
+  --letter-sm: -0.025em;
+  --letter-none: 0em;
+  --letter-lg: 0.025em;
+  --letter-xl: 0.05em;
+
   /**
    * Prose measure
    * Applied as max-width
@@ -69,4 +82,10 @@
   --prose-normal: 65ch;
   --prose-wide: 75ch;
   --prose-wider: 85ch;
+
+  --prose-xs: 45ch;
+  --prose-sm: 55ch;
+  --prose-md: 65ch;
+  --prose-lg: 75ch;
+  --prose-xl: 85ch;
 }
