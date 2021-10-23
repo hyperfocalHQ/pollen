@@ -39,6 +39,12 @@
   --radius-100: 100%;
   --radius-full: 9999px;
 
+  --radius-xs: 3px;
+  --radius-sm: 5px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
   /**
    * Layers
    * Applied as z-index
