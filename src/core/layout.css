@@ -44,17 +44,12 @@
   --size-max: max-content;
 
   /**
-   * Widths
+   * Container widths
    * Applied as max-width
    */
-  --width-1: 448px;
-  --width-2: 512px;
-  --width-3: 576px;
-  --width-4: 672px;
-  --width-5: 768px;
-  --width-6: 896px;
-  --width-7: 1024px;
-  --width-8: 1152px;
-  --width-9: 1280px;
-  --width-10: 1440px;
+  --width-xs: 480px;
+  --width-sm: 640px;
+  --width-md: 768px;
+  --width-lg: 1024px;
+  --width-xl: 1280px;
 }
