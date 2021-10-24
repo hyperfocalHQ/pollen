@@ -30,20 +30,13 @@
    * Radiuses
    * Applied as border-radius
    */
-  --radius-1: 2px;
-  --radius-2: 4px;
-  --radius-3: 6px;
-  --radius-4: 8px;
-  --radius-5: 12px;
-  --radius-6: 16px;
-  --radius-100: 100%;
-  --radius-full: 9999px;
-
   --radius-xs: 3px;
-  --radius-sm: 5px;
+  --radius-sm: 6px;
   --radius-md: 8px;
   --radius-lg: 12px;
   --radius-xl: 16px;
+  --radius-100: 100%;
+  --radius-full: 9999px;
 
   /**
    * Layers
