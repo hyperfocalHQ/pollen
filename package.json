@@ -12,7 +12,8 @@
   },
   "files": [
     "/pollen.css",
-    "/utils"
+    "/utils",
+    "/addons"
   ],
   "repository": {
     "type": "git",
