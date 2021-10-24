@@ -20,7 +20,7 @@ The Tailwind alternative that doesn't reinvent CSS
 ## Introduction 
 [![Version](https://img.shields.io/npm/v/pollen-css.svg?style=flat)](https://www.npmjs.com/package/pollen-css) ![Size](https://img.badgesize.io/https://unpkg.com/pollen-css/pollen.css?compression=gzip&label=size)
 
-Pollen is a library of [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) that encourages consistency, maintainability, and rapid development. Use it from prototype to production, as a utility-first foundation for your own design system.
+Pollen is a micro-library of [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) that encourages consistency, maintainability, and rapid development. Use it from prototype to production, as a utility-first foundation for your own design system.
 
 ### What it looks like
 
@@ -34,7 +34,7 @@ Pollen's low-level variables can be used to build any design. They work anywhere
   padding: var(--size-2) var(--size-3);
   background: var(--color-blue);
   color: white;
-  border-radius: var(--radius);
+  border-radius: var(--radius-sm);
   box-shadow: var(--elevation-2);
 }
 ```
