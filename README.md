@@ -28,14 +28,13 @@ Pollen's low-level variables can be used to build any design. They work anywhere
 
 ```css
 .button {
-  font-family: var(--font-sans);
   font-size: var(--scale-00);
   font-weight: var(--font-medium);
   padding: var(--size-2) var(--size-3);
   background: var(--color-blue);
-  color: white;
   border-radius: var(--radius-sm);
   box-shadow: var(--elevation-2);
+  color: white;
 }
 ```
 
