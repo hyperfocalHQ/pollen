@@ -6,7 +6,7 @@
 </p>
 
 <p align="center"><b>
-The Tailwind alternative that doesn't reinvent CSS
+Utility-first CSS for the future
   </b></p>
 
 <!-- <p align="center">
@@ -20,7 +20,7 @@ The Tailwind alternative that doesn't reinvent CSS
 ## Introduction 
 [![Version](https://img.shields.io/npm/v/pollen-css.svg?style=flat)](https://www.npmjs.com/package/pollen-css) ![Size](https://img.badgesize.io/https://unpkg.com/pollen-css/pollen.css?compression=gzip&label=size)
 
-Pollen is a micro-library of [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) that encourages consistency, maintainability, and rapid development. Use it from prototype to production, as a utility-first foundation for your own design system.
+Pollen is a standards-driven alternative to [Tailwind](https://tailwindcss.com). A micro-library of [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*), it encourages consistency, maintainability, and rapid development. Use it from prototype to production, as a utility-first foundation for your own design system.
 
 ### What it looks like
 
