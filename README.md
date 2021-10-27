@@ -20,7 +20,7 @@ Utility-first CSS for the future
 ## Introduction 
 [![Version](https://img.shields.io/npm/v/pollen-css.svg?style=flat)](https://www.npmjs.com/package/pollen-css) ![Size](https://img.badgesize.io/https://unpkg.com/pollen-css/pollen.css?compression=gzip&label=size)
 
-Pollen is a standards-driven alternative to [Tailwind](https://tailwindcss.com). A micro-library of [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*), it encourages consistency, maintainability, and rapid development. Use it from prototype to production, as a utility-first foundation for your own design system.
+Pollen is a standards-driven, utility-first CSS library inspired by [Tailwind](https://tailwindcss.com/). It provides a library of [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*), it encourages consistency, maintainability, and rapid development. Use it from prototype to production, as a utility-first foundation for your own design system.
 
 ### What it looks like
 
