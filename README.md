@@ -1,7 +1,7 @@
 <h1 align="center"> Pollen </h1> <br>
 <p align="center">
   <a href="https://www.pollen.style/">
-    <img alt="Pollen" title="Pollen" src="https://i.imgur.com/r7mnqUx.png" width="300">
+    <img alt="Pollen" title="Pollen" src="https://i.imgur.com/wensu33.png" width="300">
   </a>
 </p>
 
