@@ -16,6 +16,16 @@
   --radius-full: 9999px;
 
   /**
+   * Blurs
+   * Applied as backdrop-filter
+   */
+  --blur-xs: 4px;
+  --blur-sm: 8px;
+  --blur-md: 16px;
+  --blur-lg: 24px;
+  --blur-xl: 40px;
+
+  /**
    * Layers
    * Applied as z-index
    */
