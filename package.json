@@ -29,7 +29,7 @@
     "tailwindcss"
   ],
   "author": {
-    "name": "Madeleine Ostoja"
+    "name": "Madeleine Ostoja <madi@heybokeh.com>"
   },
   "license": "MIT",
   "bugs": {
@@ -38,19 +38,19 @@
   "homepage": "https://www.pollen.style",
   "devDependencies": {
     "@rollup/plugin-multi-entry": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^7.1.3",
-    "@wessberg/rollup-plugin-ts": "^1.2.24",
-    "cssnano": "^4.1.10",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@wessberg/rollup-plugin-ts": "^1.3.14",
+    "cssnano": "^5.0.10",
     "fast-glob": "^3.2.7",
-    "postcss-font-family-system-ui": "^4.2.0",
-    "prettier": "^2.0.5",
-    "rollup": "^2.7.6",
-    "rollup-plugin-postcss": "^3.1.1",
-    "rollup-plugin-terser": "^5.3.0",
-    "stylelint": "^13.3.3",
-    "typescript": "^3.8.3"
+    "postcss-font-family-system-ui": "^5.0.0",
+    "prettier": "^2.4.1",
+    "rollup": "^2.59.0",
+    "rollup-plugin-postcss": "^4.0.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "stylelint": "^14.0.1",
+    "typescript": "^4.4.4"
   },
   "dependencies": {
-    "css-vars-ponyfill": "^2.3.1"
+    "css-vars-ponyfill": "^2.4.7"
   }
 }
