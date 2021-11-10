@@ -19,11 +19,11 @@
    * Blurs
    * Applied as backdrop-filter
    */
-  --blur-xs: 4px;
-  --blur-sm: 8px;
-  --blur-md: 16px;
-  --blur-lg: 24px;
-  --blur-xl: 40px;
+  --blur-xs: blur(4px);
+  --blur-sm: blur(8px);
+  --blur-md: blur(16px);
+  --blur-lg: blur(24px);
+  --blur-xl: blur(40px);
 
   /**
    * Layers
