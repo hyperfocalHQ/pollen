@@ -1,7 +1,7 @@
 {
   "name": "pollen-css",
   "version": "3.1.1",
-  "description": "Functional CSS for the future",
+  "description": "Utility-first CSS for the future",
   "main": "pollen.css",
   "style": "pollen.css",
   "scripts": {
