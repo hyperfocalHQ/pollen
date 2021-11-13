@@ -13,7 +13,8 @@
 
     /* Module resoltion */
     "moduleResolution": "node",
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["./src/**/*"]
+  "include": ["src"]
 }

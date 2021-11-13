@@ -1,0 +1,10 @@
+{
+  "files.exclude": {
+    "**/.git": true
+    // "bin": true,
+    // "utils": true
+  },
+  "cssvar.files": ["./pollen.css"],
+  "cssvar.extensions": ["css", "ts"],
+  "cssvar.disableSort": true
+}

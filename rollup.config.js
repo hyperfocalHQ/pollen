@@ -1,47 +1,33 @@
-import multi from '@rollup/plugin-multi-entry';
+import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
-import typescript from '@wessberg/rollup-plugin-ts';
-import glob from 'fast-glob';
-import postcss from 'rollup-plugin-postcss';
+import typescript from 'rollup-plugin-ts';
+import { preserveShebangs } from 'rollup-plugin-preserve-shebangs';
 import { terser } from 'rollup-plugin-terser';
 
 export default [
   {
-    input: 'src/core/*.css',
-    output: {
-      file: 'pollen.css',
-      format: 'es'
-    },
-    plugins: [
-      multi(),
-      postcss({
-        extract: true
-      })
-    ]
-  },
-  ...glob.sync('src/addons/*.css').map((file) => ({
-    input: file,
-    output: {
-      file: `addons/${file.split('/').pop()}`,
-      format: 'es'
-    },
-    plugins: [
-      postcss({
-        extract: true
-      })
-    ]
-  })),
-  {
     input: 'src/utils/index.ts',
     output: {
       dir: 'utils',
-      format: 'cjs',
-      sourcemap: true
+      format: 'cjs'
     },
     plugins: [
       resolve({ extensions: ['.ts'], browser: true }),
-      typescript(),
+      typescript({ outDir: 'utils' }),
       terser()
+    ]
+  },
+  {
+    input: 'src/index.ts',
+    output: {
+      dir: '.',
+      format: 'cjs'
+    },
+    plugins: [
+      resolve(),
+      typescript({ outDir: '.' }),
+      commonjs({ ignoreDynamicRequires: true }),
+      preserveShebangs()
     ]
   }
 ];

@@ -3,7 +3,7 @@ node_modules
 
 # Dist
 /pollen.css
-/addons
+/bin
 /utils
 
 # Runtime

@@ -1,8 +1,13 @@
+import type { CSSVarsPonyfillOptions } from 'css-vars-ponyfill';
+
 /**
  * Conditionally load and apply a shim for CSS variables in IE
  * @param config Optional additional css-vars-ponyfill configuration
  */
-export function shimmie({ onComplete, ...config }: any): void {
+export function shimmie({
+  onComplete,
+  ...config
+}: { onComplete?(): void } & CSSVarsPonyfillOptions): void {
   const test =
     ((window || {}).CSS || {}).supports && window.CSS.supports('(--a: 0)');
 
