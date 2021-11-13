@@ -60,7 +60,7 @@ program.parse(process.argv);
     path.resolve(process.cwd(), outputPath),
     `/**
 * THIS IS AN AUTO-GENERATED FILE
-* Edit pollen.config.js to update
+* Edit Pollen config to update
 */
 :root ${toCSS(formatModule(cssMap))}`
   );
