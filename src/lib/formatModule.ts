@@ -9,7 +9,7 @@ Case.type('variable', function (s) {
 export function formatModule(module: PollenModule) {
   return Object.keys(module)
     .map((family) => {
-      return mapObject(module[family], (key, value) => [
+      return mapObject(module[family as keyof typeof module], (key, value) => [
         `--${(Case as any).variable(family)}-${(Case as any).variable(
           String(key)
         )}`,

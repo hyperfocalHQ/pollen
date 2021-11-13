@@ -1,10 +1,19 @@
 /** @type {import('../').Config} */
-module.exports = (pollen, merge) => ({
+module.exports = () => ({
   output: './addons/color.css',
   modules: {
-    typography: false,
-    layout: false,
-    ui: false,
-    colors: true
+    scale: false,
+    font: false,
+    line: false,
+    letter: false,
+    prose: false,
+    size: false,
+    width: false,
+    radius: false,
+    blur: false,
+    layer: false,
+    elevation: false,
+    easing: false,
+    color: true
   }
 });

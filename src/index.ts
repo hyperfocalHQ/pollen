@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 import { program } from 'commander';
 import { cosmiconfig } from 'cosmiconfig';
-import merge, { Options as MergeOptions } from 'deepmerge';
 import fs from 'fs';
 import mapObject, { mapObjectSkip } from 'map-obj';
 import path from 'path';
@@ -14,27 +13,26 @@ import typography from './modules/typography';
 import ui from './modules/ui';
 
 const MODULES = {
-    typography,
-    layout,
-    ui,
-    colors,
-    grid,
-    custom: {}
+    ...typography,
+    ...layout,
+    ...ui,
+    ...colors,
+    ...grid
   },
   DEFAULTS = {
-    typography: true,
-    layout: true,
-    ui: true
+    ...Object.keys(MODULES).reduce((acc, cur) => ({ ...acc, [cur]: true }), {}),
+    grid: false,
+    color: false
   };
 
 type ModuleName = keyof typeof MODULES;
 export type PollenModule = {
-  [key: string]: { [key: string]: string | number };
+  [module in ModuleName]: { [key: string]: string | number };
 };
-export type Config = (
-  pollen: typeof MODULES,
-  merge: (opts: MergeOptions) => PollenModule
-) => { output?: string; modules: { [module in ModuleName]: PollenModule } };
+export type Config = (pollen: typeof MODULES) => {
+  output?: string;
+  modules: PollenModule;
+};
 
 program
   .option('-o, --output <path>', 'output file path')
@@ -47,7 +45,7 @@ program.parse(process.argv);
     configResults = cliOpts?.config
       ? await cosmic.load(cliOpts.config)
       : await cosmic.search(),
-    config = configResults?.config(MODULES, merge),
+    config = configResults?.config(MODULES),
     outputPath = cliOpts?.output || config?.output || './pollen.css',
     cssMap = mapObject({ ...DEFAULTS, ...config?.modules }, (key, val) => {
       if (!val) {
@@ -56,16 +54,10 @@ program.parse(process.argv);
       return typeof val === 'boolean'
         ? [key, MODULES[key as keyof typeof MODULES]]
         : ([key, val] as any);
-    }),
-    output = formatModule(
-      Object.keys(cssMap).reduce(
-        (obj, cur) => ({ ...obj, ...(cssMap[cur] as any) }),
-        {}
-      )
-    );
+    }) as PollenModule;
 
   fs.writeFileSync(
     path.resolve(process.cwd(), outputPath),
-    `:root ${toCSS(output)}`
+    `:root ${toCSS(formatModule(cssMap))}`
   );
 })();

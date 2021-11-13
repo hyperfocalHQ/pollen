@@ -12,6 +12,7 @@ export default {
     pageGutter: '5vw',
     pageMain: '2 / 3',
     page: 'minmax(var(--grid-page-gutter), 1fr) minmax(0, var(--grid-page-width)) minmax(var(--grid-page-gutter), 1fr)',
+
     /**
      * Template Shorthands
      * Applied to grid-template-[columns/rows]
