@@ -5,7 +5,9 @@
   "main": "pollen.css",
   "style": "pollen.css",
   "types": "index.d.ts",
-  "bin": "index.js",
+  "bin": {
+    "pollen": "index.js"
+  },
   "scripts": {
     "develop": "rollup -c -w",
     "build": "NODE_ENV=production rollup -c",
