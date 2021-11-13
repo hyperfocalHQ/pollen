@@ -215,6 +215,9 @@ type Module = {
     };
 };
 type Config = (pollen: typeof MODULES, merge: typeof deepmerge) => {
-    [module in ModuleName]: Module;
+    output?: string;
+    modules: {
+        [module in ModuleName]: Module;
+    };
 };
 export { Config };

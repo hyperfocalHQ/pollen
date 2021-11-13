@@ -9,13 +9,17 @@
   "scripts": {
     "develop": "rollup -c -w",
     "build": "NODE_ENV=production rollup -c",
-    "prepublishOnly": "npm run build",
+    "generate:main": "node ./index.js ",
+    "generate:addons": "node ./index.js -c configs/addon.grid.js && node ./index.js -c configs/addon.color.js",
+    "prepublishOnly": "npm run build && npm run generate:main && npm run generate:addons",
     "clean": "rm -rf ./pollen.css ./utils"
   },
   "files": [
     "/pollen.css",
     "/utils",
-    "/bin"
+    "/addons",
+    "/index.js",
+    "/index.d.ts"
   ],
   "repository": {
     "type": "git",

@@ -10631,7 +10631,7 @@ var ui = {
     }
 };
 
-var Case = {exports: {}};
+var Case$1 = {exports: {}};
 
 /*! Case - v1.6.2 - 2020-03-24
 * Copyright (c) 2020 Nathan Bubna; Licensed MIT, GPL */
@@ -10805,17 +10805,22 @@ var Case = {exports: {}};
     define(module.exports ? module.exports = Case : this.Case = Case);
 
 }).call(commonjsGlobal);
-}(Case));
+}(Case$1));
 
+var Case = Case$1.exports;
+
+Case.type('variable', function (s) {
+    return Case.kebab(s.match(/[a-zA-Z]+|[0-9]+/g).join('-'));
+});
 function formatModule(module) {
     return Object.keys(module)
         .map((family) => {
         return mapObject(module[family], (key, value) => [
-            `--${Case.exports.kebab(family)}-${Case.exports.kebab(String(key))}`,
+            `--${Case.variable(family)}-${Case.variable(String(key))}`,
             value
         ]);
     })
-        .reduce((acc, cur) => ({ ...acc, ...cur }));
+        .reduce((acc, cur) => ({ ...acc, ...cur }), {});
 }
 
 var dist = {};
@@ -14366,9 +14371,9 @@ commander.exports.program
     .option('-c, --config <path>', 'config file path');
 commander.exports.program.parse(process.argv);
 (async () => {
-    const cliOpts = commander.exports.program.opts(), cosmic = cliOpts.config
+    const cliOpts = commander.exports.program.opts(), cosmic = cliOpts?.config
         ? await cosmiconfig_1('pollen').load(cliOpts.config)
-        : await cosmiconfig_1('pollen').search(), config = cosmic?.config(MODULES, cjs), outputPath = cliOpts.output || config.output || './pollen.css', cssMap = mapObject({ ...DEFAULTS, ...config.modules }, (key, val) => {
+        : await cosmiconfig_1('pollen').search(), config = cosmic?.config(MODULES, cjs), outputPath = cliOpts?.output || config?.output || './pollen.css', cssMap = mapObject({ ...DEFAULTS, ...config?.modules }, (key, val) => {
         if (!val) {
             return mapObjectSkip;
         }

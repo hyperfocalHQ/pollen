@@ -33,7 +33,7 @@ type Module = { [key: string]: { [key: string | number]: string | number } };
 export type Config = (
   pollen: typeof MODULES,
   merge: typeof deepmerge
-) => { [module in ModuleName]: Module };
+) => { output?: string; modules: { [module in ModuleName]: Module } };
 
 program
   .option('-o, --output <path>', 'output file path')
@@ -42,12 +42,12 @@ program.parse(process.argv);
 
 (async () => {
   const cliOpts = program.opts(),
-    cosmic = cliOpts.config
+    cosmic = cliOpts?.config
       ? await cosmiconfig('pollen').load(cliOpts.config)
       : await cosmiconfig('pollen').search(),
     config = cosmic?.config(MODULES, deepmerge),
-    outputPath = cliOpts.output || config.output || './pollen.css',
-    cssMap = mapObject({ ...DEFAULTS, ...config.modules }, (key, val) => {
+    outputPath = cliOpts?.output || config?.output || './pollen.css',
+    cssMap = mapObject({ ...DEFAULTS, ...config?.modules }, (key, val) => {
       if (!val) {
         return mapObjectSkip;
       }
