@@ -10,6 +10,6 @@ export function toCSS(object: { [key: string]: string | number }) {
 
       return stringify(value);
     },
-    1
-  )?.replace(/,\n/g, ';');
+    2
+  )?.replace(/,\n/g, ';\n');
 }
