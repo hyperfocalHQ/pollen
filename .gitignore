@@ -3,10 +3,10 @@ node_modules
 
 # Dist
 /pollen.css
-/addons
-/utils
 /index.js
 /index.d.ts
+/addons
+/utils
 
 # Runtime
 .DS_Store
