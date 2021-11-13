@@ -58,6 +58,10 @@ program.parse(process.argv);
 
   fs.writeFileSync(
     path.resolve(process.cwd(), outputPath),
-    `:root ${toCSS(formatModule(cssMap))}`
+    `/**
+* THIS IS AN AUTO-GENERATED FILE
+* Edit pollen.config.js to update
+*/
+:root ${toCSS(formatModule(cssMap))}`
   );
 })();
