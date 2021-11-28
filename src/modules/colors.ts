@@ -14,7 +14,8 @@ export default {
     grey600: '#555D6E',
     grey700: '#3f4754',
     grey800: '#2c343f',
-    black: '#10181c',
+    grey900: '#10181C',
+    black: '#14141B',
     grey: 'var(--color-grey-500)',
 
     /* Red */
