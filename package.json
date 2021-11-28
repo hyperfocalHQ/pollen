@@ -10,9 +10,8 @@
   },
   "scripts": {
     "develop": "rollup -c -w",
-    "build": "NODE_ENV=production rollup -c",
-    "generate": "node ./index.js ",
-    "prepublishOnly": "yarn build && yarn generate",
+    "build": "NODE_ENV=production rollup -c && node ./index.js ",
+    "prepublishOnly": "yarn build",
     "clean": "rm -rf ./pollen.css ./utils"
   },
   "files": [
