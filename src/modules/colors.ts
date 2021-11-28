@@ -4,13 +4,17 @@
  */
 export default {
   color: {
-    black: '#1a202c',
-
     /* Greyscale */
-    grey100: '#f7fafc',
-    grey300: '#e2e8f0',
-    grey500: '#a0aec0',
-    grey700: '#4a5568',
+    grey50: '#f9fafb',
+    grey100: '#f2f4f5',
+    grey200: '#e8eaed',
+    grey300: '#d4d7dd',
+    grey400: '#a5aab4',
+    grey500: '#767c89',
+    grey600: '#555D6E',
+    grey700: '#3f4754',
+    grey800: '#2c343f',
+    black: '#10181c',
     grey: 'var(--color-grey-500)',
 
     /* Red */
@@ -48,12 +52,6 @@ export default {
     teal500: '#38b2ac',
     teal700: '#2c7a7b',
     teal: 'var(--color-teal-500)',
-
-    /* Indigo */
-    indigo300: '#7f9cf5',
-    indigo500: '#5a67d8',
-    indigo700: '#4c51bf',
-    indigo: 'var(--color-indigo-500)',
 
     /* Yellow */
     yellow300: '#faf089',
