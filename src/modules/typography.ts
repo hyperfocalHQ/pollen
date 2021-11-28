@@ -28,7 +28,7 @@ export default {
    * Applied as font-family and font-weight
    */
   font: {
-    sans: 'system-ui',
+    sans: 'system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue',
     serif: 'Georgia, Cambria, "Times New Roman", Times, serif',
     mono: 'Consolas, Menlo, Monaco, "Liberation Mono", monospace'
   },
