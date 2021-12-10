@@ -11,18 +11,21 @@ import grid from './modules/grid';
 import layout from './modules/layout';
 import typography from './modules/typography';
 import ui from './modules/ui';
+import typeset from './modules/typeset';
 
 const MODULES = {
     ...typography,
     ...layout,
     ...ui,
     ...colors,
-    ...grid
+    ...grid,
+    ...typeset
   },
   DEFAULTS = {
     ...Object.keys(MODULES).reduce((acc, cur) => ({ ...acc, [cur]: true }), {}),
     grid: false,
-    color: false
+    color: false,
+    typeset: false
   };
 
 type ModuleName = keyof typeof MODULES;
@@ -45,7 +48,10 @@ program.parse(process.argv);
     configResults = cliOpts?.config
       ? await cosmic.load(cliOpts.config)
       : await cosmic.search(),
-    config = configResults?.config(MODULES),
+    config =
+      typeof configResults?.config === 'function'
+        ? configResults.config(MODULES)
+        : configResults?.config,
     outputPath = cliOpts?.output || config?.output || './pollen.css',
     cssMap = mapObject({ ...DEFAULTS, ...config?.modules }, (key, val) => {
       if (!val) {
