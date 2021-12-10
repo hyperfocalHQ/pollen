@@ -32,10 +32,11 @@ type ModuleName = keyof typeof MODULES;
 export type PollenModule = {
   [module in ModuleName]: { [key: string]: string | number };
 };
-export type Config = (pollen: typeof MODULES) => {
+type ConfigObject = {
   output?: string;
   modules: PollenModule;
 };
+export type Config = ConfigObject | ((pollen: typeof MODULES) => ConfigObject);
 
 program
   .option('-o, --output <path>', 'output file path')
