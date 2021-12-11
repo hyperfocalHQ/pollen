@@ -38,6 +38,10 @@ type ConfigObject = {
 };
 export type Config = ConfigObject | ((pollen: typeof MODULES) => ConfigObject);
 
+export function defineConfig(config: Config): ConfigObject {
+  return typeof config === 'function' ? config(MODULES) : config;
+}
+
 program
   .option('-o, --output <path>', 'output file path')
   .option('-c, --config <path>', 'config file path');
