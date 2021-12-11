@@ -4,7 +4,7 @@
   "description": "Utility-first CSS for the future",
   "main": "pollen.css",
   "style": "pollen.css",
-  "types": "index.d.ts",
+  "types": "types.d.ts",
   "bin": {
     "pollen": "index.js"
   },

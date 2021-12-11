@@ -1,6 +1,6 @@
 import { kebab } from 'case';
 import mapObject from 'map-obj';
-import type { PollenModule } from '..';
+import type { PollenModule } from '../types';
 
 export function formatModule(module: PollenModule) {
   return Object.keys(module)

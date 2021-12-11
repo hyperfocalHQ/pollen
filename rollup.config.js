@@ -29,5 +29,13 @@ export default [
       commonjs({ ignoreDynamicRequires: true }),
       preserveShebangs()
     ]
+  },
+  {
+    input: 'src/types.ts',
+    output: {
+      file: 'index.d.ts',
+      format: 'esm'
+    },
+    plugins: [resolve({ extensions: ['.ts'] }), typescript({ outDir: '.' })]
   }
 ];

@@ -4,43 +4,17 @@ import { cosmiconfig } from 'cosmiconfig';
 import fs from 'fs';
 import mapObject, { mapObjectSkip } from 'map-obj';
 import path from 'path';
+import { ConfigObject, PollenModule } from './types';
 import { formatModule } from './lib/formatModule';
 import { toCSS } from './lib/toCSS';
-import colors from './modules/colors';
-import grid from './modules/grid';
-import layout from './modules/layout';
-import typography from './modules/typography';
-import ui from './modules/ui';
-import typeset from './modules/typeset';
+import modules from './modules';
 
-const MODULES = {
-    ...typography,
-    ...layout,
-    ...ui,
-    ...colors,
-    ...grid,
-    ...typeset
-  },
-  DEFAULTS = {
-    ...Object.keys(MODULES).reduce((acc, cur) => ({ ...acc, [cur]: true }), {}),
-    grid: false,
-    color: false,
-    typeset: false
-  };
-
-type ModuleName = keyof typeof MODULES;
-export type PollenModule = {
-  [module in ModuleName]: { [key: string]: string | number };
+const DEFAULTS = {
+  ...Object.keys(modules).reduce((acc, cur) => ({ ...acc, [cur]: true }), {}),
+  grid: false,
+  color: false,
+  typeset: false
 };
-type ConfigObject = {
-  output?: string;
-  modules: PollenModule;
-};
-export type Config = ConfigObject | ((pollen: typeof MODULES) => ConfigObject);
-
-export function defineConfig(config: Config): ConfigObject {
-  return typeof config === 'function' ? config(MODULES) : config;
-}
 
 program
   .option('-o, --output <path>', 'output file path')
@@ -53,9 +27,9 @@ program.parse(process.argv);
     configResults = cliOpts?.config
       ? await cosmic.load(cliOpts.config)
       : await cosmic.search(),
-    config =
+    config: ConfigObject =
       typeof configResults?.config === 'function'
-        ? configResults.config(MODULES)
+        ? configResults.config(modules)
         : configResults?.config,
     outputPath = cliOpts?.output || config?.output || './pollen.css',
     cssMap = mapObject({ ...DEFAULTS, ...config?.modules }, (key, val) => {
@@ -63,7 +37,7 @@ program.parse(process.argv);
         return mapObjectSkip;
       }
       return typeof val === 'boolean'
-        ? [key, MODULES[key as keyof typeof MODULES]]
+        ? [key, modules[key as keyof typeof modules]]
         : ([key, val] as any);
     }) as PollenModule;
 

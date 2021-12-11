@@ -1,8 +1,9 @@
 import type { CSSVarsPonyfillOptions } from 'css-vars-ponyfill';
+import type { Config, ConfigObject } from '../types';
+import modules from '../modules';
 
 /**
  * Conditionally load and apply a shim for CSS variables in IE
- * @param config Optional additional css-vars-ponyfill configuration
  */
 export function shimmie({
   onComplete,
@@ -25,4 +26,11 @@ export function shimmie({
       });
     });
   }
+}
+
+/**
+ * Configuration helper to provide typescript support
+ */
+export function defineConfig(config: Config): ConfigObject {
+  return typeof config === 'function' ? config(modules) : config;
 }
