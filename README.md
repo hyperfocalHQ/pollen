@@ -6,7 +6,7 @@
 </p>
 
 <p align="center"><b>
-Faster, more consistent, and maintainable CSS
+Faster, more consistent, more maintainable CSS
   </b></p>
 
 <!-- <p align="center">
