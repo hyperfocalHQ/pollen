@@ -10,10 +10,7 @@ import { toCSS } from './lib/toCSS';
 import modules from './modules';
 
 const DEFAULTS = {
-  ...Object.keys(modules).reduce((acc, cur) => ({ ...acc, [cur]: true }), {}),
-  grid: false,
-  color: false,
-  typeset: false
+  ...Object.keys(modules).reduce((acc, cur) => ({ ...acc, [cur]: true }), {})
 };
 
 program
