@@ -6,7 +6,7 @@
 </p>
 
 <p align="center"><b>
-Utility-first CSS for the future, with CSS variables
+Faster, more consistent, and maintainable CSS
   </b></p>
 
 <!-- <p align="center">
@@ -20,11 +20,11 @@ Utility-first CSS for the future, with CSS variables
 
 [![Version](https://img.shields.io/npm/v/pollen-css.svg?style=flat)](https://www.npmjs.com/package/pollen-css) ![Size](https://img.badgesize.io/https://unpkg.com/pollen-css/pollen.css?compression=gzip&label=size)
 
-Pollen is a standards-driven, utility-first library of configurable CSS variables. Use it in any stack for supercharged consistency, maintainability, and rapid CSS development. Easily extend Pollen and use it as a build tool for your own custom design system.
+Pollen is a configurable library of CSS variables. It lets you write faster, more consistent, and more maintainable styles. Use it in any stack and easily extend it as a build tool for your own custom design systems.
 
 ### What it looks like
 
-Pollen's low-level variables can be used to build any design. They're easy to customise and extend, and they're globally responsive. They don't require preprocessors, class naming conventions, or any new non-standard syntax.
+Pollen's low-level design tokens can be used to build any project. They're easy to customise and extend, and they're globally responsive. They don't require preprocessors, class naming conventions, or any new non-standard syntax.
 
 ![](https://i.imgur.com/ZNfrTAz.jpg)
 
