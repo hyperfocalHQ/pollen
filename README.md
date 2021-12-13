@@ -20,7 +20,7 @@ Utility-first CSS for the future, with CSS variables
 
 [![Version](https://img.shields.io/npm/v/pollen-css.svg?style=flat)](https://www.npmjs.com/package/pollen-css) ![Size](https://img.badgesize.io/https://unpkg.com/pollen-css/pollen.css?compression=gzip&label=size)
 
-Pollen is a standards-driven, utility-first library of configurable CSS variables. It can be used in any stack to encourage consistency, maintainability, and rapid development. It can be easily extended and act as a build tool for your own robust design systems.
+Pollen is a standards-driven, utility-first library of configurable CSS variables. Use it in any stack for supercharged consistency, maintainability, and rapid CSS development. Easily extend Pollen and use it as a build tool for your own custom design system.
 
 ### What it looks like
 
