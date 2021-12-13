@@ -26,17 +26,7 @@ Pollen is a standards-driven, utility-first CSS library inspired by [Tailwind](h
 
 Pollen's low-level variables can be used to build any design. They're easy to customise and extend, and they're globally responsive. They don't require preprocessors, class naming conventions, or any new non-standard syntax.
 
-```css
-.button {
-  font-size: var(--scale-00);
-  font-weight: var(--weight-medium);
-  padding: var(--size-2) var(--size-3);
-  background: var(--color-blue);
-  border-radius: var(--radius-sm);
-  box-shadow: var(--elevation-2);
-  color: white;
-}
-```
+![](https://i.imgur.com/ZNfrTAz.jpg)
 
 ## Documentation
 
