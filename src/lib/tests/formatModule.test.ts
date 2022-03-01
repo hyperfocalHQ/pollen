@@ -1,10 +1,10 @@
-import { expect, test } from 'vitest';
+import { expect, test, describe, it } from 'vitest';
 import modules from '../../modules';
-import { PollenModule } from '../../types';
 import { formatModule } from '../formatModule';
 
-test('formatModule()', () => {
-  expect(formatModule(modules)).toMatchInlineSnapshot(`
+describe('formatModule()', () => {
+  it('formats default modules', () => {
+    expect(formatModule(modules)).toMatchInlineSnapshot(`
     {
       "--blur-lg": "blur(24px)",
       "--blur-md": "blur(16px)",
@@ -178,4 +178,5 @@ test('formatModule()', () => {
       "--width-xs": "480px",
     }
   `);
+  });
 });
