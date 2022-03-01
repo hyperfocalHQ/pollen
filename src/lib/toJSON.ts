@@ -1,3 +1,3 @@
-export function toJSON(object: Record<string, string | number>) {
+export function toJSON(object: object) {
   return JSON.stringify(object, null, 2);
 }

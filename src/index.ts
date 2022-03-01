@@ -58,10 +58,5 @@ function parseOutputConfig(output: ConfigObject['output']) {
 :root ${toCSS(formatModule(cssMap))}`
   );
 
-  if (schema) {
-    fs.writeFileSync(
-      path.resolve(process.cwd(), schema),
-      toJSON(modules as Record<string, any>)
-    );
-  }
+  schema && fs.writeFileSync(path.resolve(process.cwd(), schema), toJSON(modules));
 })();
