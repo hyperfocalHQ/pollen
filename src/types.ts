@@ -1,5 +1,5 @@
 import modules from './modules';
-type ModuleName = keyof typeof modules;
+export type ModuleName = keyof typeof modules;
 
 export type PollenModule = {
   [module in ModuleName]: { [key: string]: string | number };
