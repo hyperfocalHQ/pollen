@@ -6,7 +6,10 @@ export type PollenModule = {
 };
 
 export type ConfigObject = {
-  output?: string;
+  output?: string | {
+    css?: string,
+    schema?: string,
+  };
   modules: PollenModule;
 };
 
