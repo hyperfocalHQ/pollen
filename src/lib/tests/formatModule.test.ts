@@ -1,9 +1,9 @@
-import { expect, test, describe, it } from 'vitest';
+import { expect, test, describe } from 'vitest';
 import modules from '../../modules';
 import { formatModule } from '../formatModule';
 
 describe('formatModule()', () => {
-  it('formats default modules', () => {
+  test('formats default modules', () => {
     expect(formatModule(modules)).toMatchInlineSnapshot(`
     {
       "--blur-lg": "blur(24px)",

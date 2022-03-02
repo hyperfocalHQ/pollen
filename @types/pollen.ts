@@ -10,8 +10,9 @@ export type ConfigObject = {
     | string
     | {
         css?: string;
-        schema?: string;
+        json?: string;
       };
+  selector?: string;
   modules: PollenModule;
 };
 
