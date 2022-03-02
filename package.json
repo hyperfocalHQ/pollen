@@ -12,7 +12,9 @@
     "develop": "rollup -c -w",
     "build": "NODE_ENV=production rollup -c && node ./index.js ",
     "prepublishOnly": "yarn build",
-    "clean": "rm -rf ./pollen.css ./utils"
+    "clean": "rm -rf ./pollen.css ./utils",
+    "test": "vitest",
+    "coverage": "vitest --coverage"
   },
   "files": [
     "/pollen.css",
@@ -45,13 +47,15 @@
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@types/stringify-object": "^4.0.0",
+    "c8": "^7.11.0",
     "rollup": "^2.59.0",
     "rollup-plugin-preserve-shebangs": "^0.2.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-ts": "^1.4.7",
     "stylelint": "^14.0.1",
     "tslib": "^2.3.1",
-    "typescript": "^4.4.4"
+    "typescript": "^4.4.4",
+    "vitest": "^0.5.9"
   },
   "dependencies": {
     "case": "^1.6.3",
