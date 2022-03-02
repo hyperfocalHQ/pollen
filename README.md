@@ -9,16 +9,9 @@
 Faster, more consistent, more maintainable CSS
   </b></p>
 
-<!-- <p align="center">
-  <a href="https://www.npmjs.com/package/pollen-css">
-    <img alt="Get it on NPM" title="NPM" src="https://img.shields.io/npm/v/pollen-css.svg?style=flat">
-  </a>
-  <img alt="Pollen Size" title="Pollen Size" src="https://img.badgesize.io/https://unpkg.com/pollen-css/pollen.css?compression=gzip&label=size">
-</p> -->
-
 ## Introduction
 
-[![Version](https://img.shields.io/npm/v/pollen-css.svg?style=flat)](https://www.npmjs.com/package/pollen-css) ![Size](https://img.badgesize.io/https://unpkg.com/pollen-css/pollen.css?compression=gzip&label=size)
+[![Version](https://img.shields.io/npm/v/pollen-css.svg?style=flat)](https://www.npmjs.com/package/pollen-css) ![Size](https://img.badgesize.io/https://unpkg.com/pollen-css/pollen.css?compression=gzip&label=size) ![Tests](https://github.com/heybokeh/pollen/actions/workflows/main.yml/badge.svg)
 
 Pollen is a configurable library of CSS variables. It lets you write faster, more consistent, and more maintainable styles. Use it in any stack and easily extend it as a build tool for your own custom design systems.
 
