@@ -31,7 +31,7 @@ export default [
     ]
   },
   {
-    input: 'src/types.ts',
+    input: '@types/pollen.d.ts',
     output: {
       file: 'index.d.ts',
       format: 'esm'

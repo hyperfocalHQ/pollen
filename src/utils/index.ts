@@ -1,5 +1,5 @@
 import type { CSSVarsPonyfillOptions } from 'css-vars-ponyfill';
-import type { Config, ConfigObject } from '../types';
+import type { Config, ConfigObject } from '../../@types/pollen';
 import modules from '../modules';
 
 /**
@@ -8,7 +8,7 @@ import modules from '../modules';
 export function shimmie({
   onComplete,
   ...config
-}: { onComplete?(): void } & CSSVarsPonyfillOptions): void {
+}: { onComplete?(): void } & Partial<CSSVarsPonyfillOptions>): void {
   const test =
     ((window || {}).CSS || {}).supports && window.CSS.supports('(--a: 0)');
 

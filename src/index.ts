@@ -4,7 +4,7 @@ import { cosmiconfig } from 'cosmiconfig';
 import fs from 'fs';
 import mapObject, { mapObjectSkip } from 'map-obj';
 import path from 'path';
-import { ConfigObject, PollenModule } from './types';
+import { ConfigObject, PollenModule } from '../@types/pollen';
 import { formatModule } from './lib/formatModule';
 import { toCSS } from './lib/toCSS';
 import modules from './modules';
@@ -39,15 +39,17 @@ function parseOutputConfig(output: ConfigObject['output']) {
     typeof configResults?.config === 'function'
       ? configResults.config(modules)
       : configResults?.config;
-  const { css = './pollen.css', schema } = parseOutputConfig(cliOpts?.output || config?.output)
+  const { css = './pollen.css', schema } = parseOutputConfig(
+    cliOpts?.output || config?.output
+  );
   const cssMap = mapObject({ ...DEFAULTS, ...config?.modules }, (key, val) => {
-      if (!val) {
-        return mapObjectSkip;
-      }
-      return typeof val === 'boolean'
-        ? [key, modules[key as keyof typeof modules]]
-        : ([key, val] as any);
-    }) as PollenModule;
+    if (!val) {
+      return mapObjectSkip;
+    }
+    return typeof val === 'boolean'
+      ? [key, modules[key as keyof typeof modules]]
+      : ([key, val] as any);
+  }) as PollenModule;
 
   fs.writeFileSync(
     path.resolve(process.cwd(), css),
@@ -58,5 +60,6 @@ function parseOutputConfig(output: ConfigObject['output']) {
 :root ${toCSS(formatModule(cssMap))}`
   );
 
-  schema && fs.writeFileSync(path.resolve(process.cwd(), schema), toJSON(modules));
+  schema &&
+    fs.writeFileSync(path.resolve(process.cwd(), schema), toJSON(modules));
 })();
