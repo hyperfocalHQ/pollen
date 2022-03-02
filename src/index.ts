@@ -7,8 +7,8 @@ import path from 'path';
 import { ConfigObject, PollenModule } from '../@types/pollen';
 import { formatModule } from './lib/formatModule';
 import { toCSS } from './lib/toCSS';
-import modules from './modules';
 import { toJSON } from './lib/toJSON';
+import modules from './modules';
 
 const DEFAULTS = {
   ...Object.keys(modules).reduce((acc, cur) => ({ ...acc, [cur]: true }), {})
@@ -42,14 +42,17 @@ function parseOutputConfig(output: ConfigObject['output']) {
   const { css = './pollen.css', schema } = parseOutputConfig(
     cliOpts?.output || config?.output
   );
-  const cssMap = mapObject({ ...DEFAULTS, ...config?.modules }, (key, val) => {
-    if (!val) {
-      return mapObjectSkip;
+  const cssMap = mapObject(
+    { ...DEFAULTS, ...config?.modules },
+    (key: string, val: string) => {
+      if (!val) {
+        return mapObjectSkip;
+      }
+      return typeof val === 'boolean'
+        ? [key, modules[key as keyof typeof modules]]
+        : ([key, val] as any);
     }
-    return typeof val === 'boolean'
-      ? [key, modules[key as keyof typeof modules]]
-      : ([key, val] as any);
-  }) as PollenModule;
+  ) as PollenModule;
 
   fs.writeFileSync(
     path.resolve(process.cwd(), css),

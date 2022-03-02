@@ -1,4 +1,4 @@
-import modules from './modules';
+import modules from '../src/modules';
 type ModuleName = keyof typeof modules;
 
 export type PollenModule = {
@@ -6,10 +6,12 @@ export type PollenModule = {
 };
 
 export type ConfigObject = {
-  output?: string | {
-    css?: string,
-    schema?: string,
-  };
+  output?:
+    | string
+    | {
+        css?: string;
+        schema?: string;
+      };
   modules: PollenModule;
 };
 
