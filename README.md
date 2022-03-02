@@ -1,13 +1,11 @@
 <h1 align="center"> Pollen </h1> <br>
 <p align="center">
   <a href="https://www.pollen.style/">
-    <img alt="Pollen" title="Pollen" src="https://i.imgur.com/wensu33.png" width="250">
+    <img alt="Pollen" title="Pollen" src="https://i.imgur.com/wensu33.png" width="200">
   </a>
 </p>
 
-<p align="center"><b>
-Faster, more consistent, more maintainable CSS
-  </b></p>
+<h3 align="center">Faster, more consistent, more maintainable CSS</h3>
 
 ## Introduction
 
@@ -17,9 +15,11 @@ Pollen is a configurable library of CSS variables. It lets you write faster, mor
 
 ### What it looks like
 
-Pollen's low-level design tokens can be used to build any project. They're easy to customise and extend, and they're globally responsive. They don't require preprocessors, class naming conventions, or any new non-standard syntax.
+Pollen's low-level design tokens can be used to build any project. They're easy to customise and extend, and they're globally responsive. They don't require preprocessors, class naming conventions, or any new non-standard syntax. Generate your own entirely custom design system with a simple config file.
 
-![](https://i.imgur.com/ZNfrTAz.jpg)
+<p align="center">
+  <img src="https://i.imgur.com/ZNfrTAz.jpg" width="750">
+</p>
 
 ## Documentation
 
