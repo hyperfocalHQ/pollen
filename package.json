@@ -9,11 +9,11 @@
     "pollen": "index.js"
   },
   "scripts": {
-    "develop": "rollup -c -w",
+    "develop": "rollup -c -w & vitest",
     "build": "NODE_ENV=production rollup -c && node ./index.js ",
-    "prepublishOnly": "yarn build",
+    "prepublishOnly": "npm run build && npm run test",
     "clean": "rm -rf ./pollen.css ./utils",
-    "test": "vitest",
+    "test": "vitest run",
     "coverage": "vitest --coverage"
   },
   "files": [
