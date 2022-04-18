@@ -63,5 +63,5 @@ function parseOutputConfig(output: ConfigObject['output']) {
 ${config?.selector || ':root'} ${toCSS(formatModule(cssMap))}`
   );
 
-  json && fs.writeFileSync(path.resolve(process.cwd(), json), toJSON(modules));
+  json && fs.writeFileSync(path.resolve(process.cwd(), json), toJSON({ ...modules, ...config.modules }));
 })();
