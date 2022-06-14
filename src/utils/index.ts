@@ -1,3 +1,5 @@
+import fs from 'fs';
+import path from 'path';
 import type { CSSVarsPonyfillOptions } from 'css-vars-ponyfill';
 import type { Config, ConfigObject } from '../../@types/pollen';
 import modules from '../modules';
@@ -33,4 +35,13 @@ export function shimmie({
  */
 export function defineConfig(config: Config): ConfigObject {
   return typeof config === 'function' ? config(modules) : config;
+}
+
+export function writeFile(filePath: string, content: string): void {
+  if(typeof window !== 'undefined') {
+    throw new Error("writeFile cannot be used in a browser");
+  }
+  const directoryPath = path.dirname(filePath);
+  !fs.existsSync(directoryPath) && fs.mkdirSync(directoryPath, { recursive: true });
+  fs.writeFileSync(filePath, content);
 }

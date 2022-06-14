@@ -8,6 +8,7 @@ import { ConfigObject, PollenModule } from '../@types/pollen';
 import { formatModule } from './lib/formatModule';
 import { toCSS } from './lib/toCSS';
 import { toJSON } from './lib/toJSON';
+import { writeFile } from './utils';
 import modules from './modules';
 
 const DEFAULTS = {
@@ -54,8 +55,8 @@ function parseOutputConfig(output: ConfigObject['output']) {
       }
     ) as PollenModule;
 
-  fs.writeFileSync(
-    path.resolve(process.cwd(), css),
+  writeFile(path.resolve(
+    process.cwd(), css), 
     `/**
 * THIS IS AN AUTO-GENERATED FILE
 * Edit Pollen config to update
@@ -63,5 +64,8 @@ function parseOutputConfig(output: ConfigObject['output']) {
 ${config?.selector || ':root'} ${toCSS(formatModule(cssMap))}`
   );
 
-  json && fs.writeFileSync(path.resolve(process.cwd(), json), toJSON({ ...modules, ...config.modules }));
+  json && writeFile(
+    path.resolve(process.cwd(), json), 
+    toJSON({ ...modules, ...config.modules })
+  );
 })();
