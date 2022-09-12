@@ -5,45 +5,61 @@ import fs from 'fs';
 import mapObject, { mapObjectSkip } from 'map-obj';
 import path from 'path';
 import { ConfigObject, PollenModule } from '../@types/pollen';
-import { formatModule } from './lib/formatModule';
-import { toCSS } from './lib/toCSS';
-import { toJSON } from './lib/toJSON';
+import { formatModule, toCSS } from './lib';
 import modules from './modules';
 
-const DEFAULTS = {
-  ...Object.keys(modules).reduce((acc, cur) => ({ ...acc, [cur]: true }), {})
-};
-
+// Init CLI
 program
   .option('-o, --output <path>', 'output file path')
   .option('-c, --config <path>', 'config file path');
 program.parse(process.argv);
 
-function parseOutputConfig(output: ConfigObject['output']) {
-  if (!output) {
-    return { css: undefined, json: undefined };
-  }
-  if (typeof output === 'string') {
-    return { css: output, json: undefined };
-  }
-  return output;
+// Default Config
+const DEFAULTS = {
+  output: './pollen.css',
+  modules: Object.keys(modules).reduce(
+    (acc, cur) => ({ ...acc, [cur]: true }),
+    {}
+  )
+};
+
+// File writer
+function writeFiles(config: ConfigObject, data: PollenModule) {
+  const output =
+    typeof config.output === 'string'
+      ? { css: config.output, json: undefined }
+      : config.output!;
+
+  fs.writeFileSync(
+    path.resolve(process.cwd(), output.css!),
+    `/**
+* THIS IS AN AUTO-GENERATED FILE
+* Edit Pollen config to update
+*/
+${toCSS(config?.selector || ':root', formatModule(data))}`
+  );
+
+  output.json &&
+    fs.writeFileSync(
+      path.resolve(process.cwd(), output.json),
+      JSON.stringify(data, null, 2)
+    );
 }
 
-(async () => {
+// Run it
+async function run() {
   const cliOpts = program.opts(),
     cosmic = cosmiconfig('pollen'),
     configResults = cliOpts?.config
       ? await cosmic.load(cliOpts.config)
       : await cosmic.search(),
-    config: ConfigObject =
+    userConfig: ConfigObject =
       typeof configResults?.config === 'function'
         ? configResults.config(modules)
         : configResults?.config,
-    { css = './pollen.css', json } = parseOutputConfig(
-      cliOpts?.output || config?.output
-    ),
-    cssMap = mapObject(
-      { ...DEFAULTS, ...config?.modules },
+    config = { ...DEFAULTS, ...userConfig, ...cliOpts },
+    css = mapObject(
+      { ...DEFAULTS.modules, ...config?.modules },
       (key: string, val: string) => {
         if (!val) {
           return mapObjectSkip;
@@ -54,14 +70,7 @@ function parseOutputConfig(output: ConfigObject['output']) {
       }
     ) as PollenModule;
 
-  fs.writeFileSync(
-    path.resolve(process.cwd(), css),
-    `/**
-* THIS IS AN AUTO-GENERATED FILE
-* Edit Pollen config to update
-*/
-${config?.selector || ':root'} ${toCSS(formatModule(cssMap))}`
-  );
+  writeFiles(config, css);
+}
 
-  json && fs.writeFileSync(path.resolve(process.cwd(), json), toJSON({ ...modules, ...config.modules }));
-})();
+run();
