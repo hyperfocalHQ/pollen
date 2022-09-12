@@ -5,7 +5,7 @@
   </a>
 </p>
 
-<h3 align="center">The CSS Variable Build System</h3>
+<h3 align="center">The CSS variables build system</h3>
 
 <p align="center">
   <img src="https://img.shields.io/npm/v/pollen-css.svg?style=flat" />
