@@ -5,7 +5,7 @@
   </a>
 </p>
 
-<h3 align="center">Faster, more consistent, more maintainable CSS</h3>
+<h3 align="center">The CSS Variable Build System</h3>
 
 <p align="center">
   <img src="https://img.shields.io/npm/v/pollen-css.svg?style=flat" />
@@ -16,15 +16,25 @@
   
 <br/>
 
-Pollen is a configurable library of CSS variables. It lets you write faster, more consistent, and more maintainable styles. Use it in any stack and easily extend it as a build tool for your own custom design systems.
+Pollen is a highly configurable, responsive toolchain of style-agnostic CSS variables for your next design system. It lets you write faster, more consistent, and more maintainable styles.
+
+Made and maintained with ❤️ by the fine people at [Bokeh](https://bokeh.photo).
 
 ### What it looks like
 
-Pollen's low-level design tokens can be used to build any project. They're easy to customise and extend, and they're globally responsive. They don't require preprocessors, class naming conventions, or any new non-standard syntax. Generate your own entirely custom design system with a simple config file.
+Pollen's design tokens can be used to build any project. They're easy to completely customise and extend and they don't require preprocessors, class naming conventions, or non-standard syntax. Generate an entirely custom design system with a simple config file.
 
 <p align="center">
   <img src="https://i.imgur.com/ZNfrTAz.jpg" width="750">
 </p>
+
+### Core features
+
+- Robust library of well-considered, style-agnostic CSS variables
+- Fully configurable and extensible with CLI build tool
+- Zero setup required to get started
+- Easy responsive design with support for configuring CSS queries (see )
+- Lightweight, human-readable output if you ever want to move away from Pollen
 
 ## Documentation
 
