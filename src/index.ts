@@ -28,8 +28,22 @@ function writeFiles(config: ConfigObject, data: PollenModule) {
   const output =
       typeof config.output === 'string'
         ? { css: config.output, json: undefined }
-        : config.output!,
+        : config.output,
     selector = config?.selector || ':root';
+
+  const writeDirIfNeeded = (filePath: string) => {
+    const dir = path.dirname(filePath);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+  };
+
+  if (!output?.css) {
+    throw new Error('No output given');
+  }
+
+  writeDirIfNeeded(output.css);
+  output.json && writeDirIfNeeded(output.json);
 
   fs.writeFileSync(
     path.resolve(process.cwd(), output.css!),
