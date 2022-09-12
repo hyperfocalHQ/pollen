@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { formatModule, toCSS } from '.';
+import { formatModule, queriesToCSS, toCSS } from '.';
 
 const FIXTURES = {
     format: {
@@ -16,6 +16,33 @@ const FIXTURES = {
       '--a-camel-case': 'value',
       '--a-numeric': 0,
       '--a-property': 'value'
+    },
+    cssQueries: {
+      media: {
+        '(min-width: 640px)': {
+          a: {
+            property: 'value'
+          },
+          b: {
+            property: 'value'
+          }
+        },
+        '(min-width: 960px)': {
+          a: {
+            property: 'value'
+          }
+        }
+      },
+      supports: {
+        'not (display: grid)': {
+          c: {
+            property: 'value'
+          },
+          d: {
+            property: 'value'
+          }
+        }
+      }
     }
   },
   EXPECTED = {
@@ -31,9 +58,30 @@ const FIXTURES = {
     ":root {
       --a-camel-case: value;
       --a-numeric: 0;
-      --a-property: value
-    }"
-  `
+      --a-property: value;
+    }
+    "
+  `,
+    cssQueries: `
+    "@media (min-width: 640px) {
+      :root {
+        --a-property: value;
+        --b-property: value;
+      }
+    }
+    @media (min-width: 960px) {
+      :root {
+        --a-property: value;
+      }
+    }
+    @supports not (display: grid) {
+      :root {
+        --c-property: value;
+        --d-property: value;
+      }
+    }
+    "
+    `
   };
 
 describe('formatModule()', () => {
@@ -45,7 +93,15 @@ describe('formatModule()', () => {
 });
 
 describe('toCSS()', () => {
-  test('turns JSON into CSS', () => {
+  test('turns property object into CSS', () => {
     expect(toCSS(':root', FIXTURES.css)).toMatchInlineSnapshot(EXPECTED.css);
+  });
+});
+
+describe('queriesToCSS()', () => {
+  test('turns query object into CSS', () => {
+    expect(
+      queriesToCSS(':root', FIXTURES.cssQueries as any)
+    ).toMatchInlineSnapshot(EXPECTED.cssQueries);
   });
 });

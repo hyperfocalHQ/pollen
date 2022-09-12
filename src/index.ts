@@ -5,7 +5,7 @@ import fs from 'fs';
 import mapObject, { mapObjectSkip } from 'map-obj';
 import path from 'path';
 import { ConfigObject, PollenModule } from '../@types/pollen';
-import { formatModule, toCSS } from './lib';
+import { format, formatModule, queriesToCSS, toCSS } from './lib';
 import modules from './modules';
 
 // Init CLI
@@ -26,17 +26,25 @@ const DEFAULTS = {
 // File writer
 function writeFiles(config: ConfigObject, data: PollenModule) {
   const output =
-    typeof config.output === 'string'
-      ? { css: config.output, json: undefined }
-      : config.output!;
+      typeof config.output === 'string'
+        ? { css: config.output, json: undefined }
+        : config.output!,
+    selector = config?.selector || ':root';
 
   fs.writeFileSync(
     path.resolve(process.cwd(), output.css!),
-    `/**
-* THIS IS AN AUTO-GENERATED FILE
-* Edit Pollen config to update
-*/
-${toCSS(config?.selector || ':root', formatModule(data))}`
+    format(
+      `/**
+  * THIS IS AN AUTO-GENERATED FILE
+  * Edit Pollen config to update
+  */
+      ${toCSS(selector, formatModule(data))}
+      ${queriesToCSS(selector, {
+        ...(config.media ? { media: config.media } : {}),
+        ...(config.supports ? { supports: config.supports } : {})
+      })}
+      `
+    )
   );
 
   output.json &&
@@ -68,7 +76,7 @@ async function run() {
           ? [key, modules[key as keyof typeof modules]]
           : ([key, val] as any);
       }
-    ) as PollenModule;
+    );
 
   writeFiles(config, css);
 }
