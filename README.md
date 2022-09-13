@@ -20,6 +20,14 @@ Pollen is a highly configurable, responsive toolchain of style-agnostic CSS vari
 
 Made and maintained with ❤️ by the fine people at [Bokeh](https://bokeh.photo).
 
+### Features
+
+- Robust library of well-considered, style-agnostic CSS variables
+- Fully configurable and extensible with CLI build tool
+- Zero setup required to get started
+- Easy responsive design with support for configuring CSS queries
+- Lightweight, human-readable output if you ever want to move away from Pollen
+
 ### What it looks like
 
 Pollen's design tokens can be used to build any project. They're easy to completely customise and extend and they don't require preprocessors, class naming conventions, or non-standard syntax. Generate an entirely custom design system with a simple config file.
@@ -27,14 +35,6 @@ Pollen's design tokens can be used to build any project. They're easy to complet
 <p align="center">
   <img src="https://i.imgur.com/ZNfrTAz.jpg" width="750">
 </p>
-
-### Core features
-
-- Robust library of well-considered, style-agnostic CSS variables
-- Fully configurable and extensible with CLI build tool
-- Zero setup required to get started
-- Easy responsive design with support for configuring CSS queries (see )
-- Lightweight, human-readable output if you ever want to move away from Pollen
 
 ## Documentation
 
