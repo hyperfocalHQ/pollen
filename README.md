@@ -16,7 +16,7 @@
   
 <br/>
 
-Pollen is a highly configurable, responsive toolchain of style-agnostic CSS variables for your next design system. It lets you write faster, more consistent, and more maintainable styles.
+Pollen is a highly configurable, responsive toolchain of CSS variables for your next design system. It lets you write faster, more consistent, and more maintainable styles.
 
 Made and maintained with ❤️ by the fine people at [Bokeh](https://bokeh.photo).
 
@@ -25,7 +25,7 @@ Made and maintained with ❤️ by the fine people at [Bokeh](https://bokeh.phot
 - Robust library of well-considered, style-agnostic CSS variables
 - Fully configurable and extensible with CLI build tool
 - Zero setup required to get started
-- Easy responsive design with support for configuring CSS queries
+- Easy responsive design with configurable `@media` and `@supports` queries
 - Lightweight, human-readable output if you ever want to move away from Pollen
 
 ### What it looks like
@@ -35,6 +35,58 @@ Pollen's design tokens can be used to build any project. They're easy to complet
 <p align="center">
   <img src="https://i.imgur.com/ZNfrTAz.jpg" width="750">
 </p>
+
+### How it works
+
+#### 1. Configure your design system
+
+`pollen.config.js`
+
+```js
+module.exports = (pollen) => ({
+  output: './pollen.css',
+  modules: {
+    color: {
+      ...pollen.colors,
+      bg: 'white',
+      text: 'var(--color-black)'
+    }
+  },
+  media: {
+    '(prefers-color-scheme: dark)': {
+      color: {
+        bg: 'var(--color-black)',
+        text: 'white'
+      }
+    }
+  }
+});
+```
+
+#### 2. Build your CSS
+
+```sh
+$ pollen
+```
+
+#### 3. Use the CSS
+
+`./pollen.css`
+
+```css
+:root {
+  ...
+  --color-bg: white;
+  --color-text: var(--color-black);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: var(--color-black);
+    --color-text: white;
+  }
+}
+```
 
 ## Documentation
 
