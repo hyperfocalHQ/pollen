@@ -36,7 +36,7 @@ Pollen's design tokens can be used to build any project. They're easy to complet
   <img src="https://i.imgur.com/ZNfrTAz.jpg" width="750">
 </p>
 
-### How it works
+## How it works
 
 #### 1. Configure your design system
 
@@ -87,6 +87,29 @@ $ pollen
   }
 }
 ```
+
+## What it includes
+
+Pollen's default variables include expertly crafted modules for:
+
+- Font sizes
+- Fluid font sizes
+- Font sets
+- Font weights
+- Line heights
+- Letter spacings
+- Prose widths
+- Size scale
+- Container widths
+- Aspect ratios
+- Color pallete
+- Border radiuses
+- Blurs
+- Z-index layers
+- Box shadows
+- Easing functions
+- Page grid
+- Content grids
 
 ## Documentation
 
