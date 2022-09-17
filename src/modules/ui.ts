@@ -44,21 +44,6 @@ export default {
   },
 
   /**
-   * Elevation
-   * Applied as box-shadow
-   * TODO: Deprecate in v5
-   */
-  elevation: {
-    1: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
-    2: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    3: '0 4px 6px -2px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06)',
-    4: '0 12px 16px -4px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
-    5: '0 20px 24px -4px rgba(0, 0, 0, 0.1), 0 8px 8px -4px rgba(0, 0, 0, 0.04)',
-    6: '0 24px 48px -12px rgba(0, 0, 0, 0.25)',
-    7: '0 32px 64px -12px rgba(0, 0, 0, 0.2)'
-  },
-
-  /**
    * Shadow
    * Applied as box-shadow
    */
@@ -68,18 +53,6 @@ export default {
     md: '0 12px 16px -4px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
     lg: '0 20px 24px -4px rgba(0, 0, 0, 0.1), 0 8px 8px -4px rgba(0, 0, 0, 0.04)',
     xl: '0 24px 48px -12px rgba(0, 0, 0, 0.25)'
-  },
-
-  /**
-   * Motion easing curves
-   * Applied in transitions and animations
-   * Inspired by Material Design https://material.io/design/motion/speed.html#easing
-   * TODO: Deprecate in v5
-   */
-  easing: {
-    standard: 'cubic-bezier(0.4, 0, 0.2, 1)',
-    accelerate: 'cubic-bezier(0.4, 0, 1, 1)',
-    decelerate: 'cubic-bezier(0, 0, 0.2, 1)'
   },
 
   /**
@@ -111,5 +84,22 @@ export default {
     inBack: 'cubic-bezier(0.6, -0.28, 0.735, 0.045)',
     outBack: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)',
     inOutBack: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)'
+  },
+
+  // UPCOMING DEPRECATIONS
+  // TODO: Deprecate in v5
+  easing: {
+    standard: 'cubic-bezier(0.4, 0, 0.2, 1)',
+    accelerate: 'cubic-bezier(0.4, 0, 1, 1)',
+    decelerate: 'cubic-bezier(0, 0, 0.2, 1)'
+  },
+  elevation: {
+    1: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+    2: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
+    3: '0 4px 6px -2px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06)',
+    4: '0 12px 16px -4px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+    5: '0 20px 24px -4px rgba(0, 0, 0, 0.1), 0 8px 8px -4px rgba(0, 0, 0, 0.04)',
+    6: '0 24px 48px -12px rgba(0, 0, 0, 0.25)',
+    7: '0 32px 64px -12px rgba(0, 0, 0, 0.2)'
   }
 };

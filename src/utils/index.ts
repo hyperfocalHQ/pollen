@@ -3,6 +3,30 @@ import type { Config, ConfigObject } from '../../@types/pollen';
 import modules from '../modules';
 
 /**
+ * Configuration helper to provide typescript support
+ */
+export function defineConfig(config: Config): ConfigObject {
+  return typeof config === 'function' ? config(modules) : config;
+}
+
+/**
+ * Fluid size utility
+ */
+export function fluid(
+  minFontSize: number,
+  maxFontSize: number,
+  minWidth = 480,
+  maxWidth = 1280
+) {
+  const slope = (maxFontSize - minFontSize) / (maxWidth - minWidth),
+    yAxisIntersection = -minWidth * slope + minFontSize;
+
+  return `clamp(${minFontSize / 16}rem, ${yAxisIntersection / 16}rem + ${
+    slope * 100
+  }vw, ${maxFontSize / 16}rem)`;
+}
+
+/**
  * Conditionally load and apply a shim for CSS variables in IE
  */
 export function shimmie({
@@ -26,11 +50,4 @@ export function shimmie({
       });
     });
   }
-}
-
-/**
- * Configuration helper to provide typescript support
- */
-export function defineConfig(config: Config): ConfigObject {
-  return typeof config === 'function' ? config(modules) : config;
 }

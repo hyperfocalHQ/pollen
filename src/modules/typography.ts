@@ -1,3 +1,5 @@
+import { fluid } from '../utils';
+
 /**
  * Typography
  * For a foundation in type
@@ -21,6 +23,26 @@ export default {
     '8': '4.5rem' /* 72px */,
     '9': '6rem' /* 96px */,
     '10': '8rem' /* 128px */
+  },
+
+  /**
+   * Fluid type scale using generated clamp()
+   * Applied as font-size
+   */
+  scaleFluid: {
+    '000': fluid(10, 12),
+    '00': fluid(12, 14),
+    '0': fluid(14, 16),
+    '1': fluid(16, 18),
+    '2': fluid(18, 20),
+    '3': fluid(29, 24),
+    '4': fluid(24, 30),
+    '5': fluid(30, 36),
+    '6': fluid(36, 48),
+    '7': fluid(48, 60),
+    '8': fluid(60, 72),
+    '9': fluid(72, 96),
+    '10': fluid(96, 128)
   },
 
   /**
