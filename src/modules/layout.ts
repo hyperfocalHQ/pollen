@@ -51,5 +51,19 @@ export default {
     md: '768px',
     lg: '1024px',
     xl: '1280px'
+  },
+
+  /**
+   * Aspect ratios
+   * Applied as aspect-ratio
+   */
+  ratio: {
+    square: '1/1',
+    portrait: '3/4',
+    landscape: '4/3',
+    tall: '2/3',
+    wide: '3/2',
+    widescreen: '16/9',
+    golden: '1.618/1'
   }
 };
