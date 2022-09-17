@@ -13,17 +13,17 @@ export function defineConfig(config: Config): ConfigObject {
  * Fluid size utility
  */
 export function fluid(
-  minFontSize: number,
-  maxFontSize: number,
+  minSize: number,
+  maxSize: number,
   minWidth = 480,
   maxWidth = 1280
 ) {
-  const slope = (maxFontSize - minFontSize) / (maxWidth - minWidth),
-    yAxisIntersection = -minWidth * slope + minFontSize;
+  const slope = (maxSize - minSize) / (maxWidth - minWidth),
+    yAxisIntersection = -minWidth * slope + minSize;
 
-  return `clamp(${minFontSize / 16}rem, ${yAxisIntersection / 16}rem + ${
+  return `clamp(${minSize / 16}rem, ${yAxisIntersection / 16}rem + ${
     slope * 100
-  }vw, ${maxFontSize / 16}rem)`;
+  }vw, ${maxSize / 16}rem)`;
 }
 
 /**
