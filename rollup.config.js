@@ -4,6 +4,21 @@ import typescript from 'rollup-plugin-ts';
 import { preserveShebangs } from 'rollup-plugin-preserve-shebangs';
 import { terser } from 'rollup-plugin-terser';
 
+function retainImports() {
+  return {
+    name: 'retain-import-expression',
+    resolveDynamicImport() {
+      return false;
+    },
+    renderDynamicImport() {
+      return {
+        left: 'import(',
+        right: ')'
+      };
+    }
+  };
+}
+
 export default [
   {
     input: 'src/utils/index.ts',
@@ -12,7 +27,7 @@ export default [
       format: 'cjs'
     },
     plugins: [
-      resolve({ extensions: ['.ts'], browser: true }),
+      resolve({ browser: true }),
       typescript({ outDir: 'utils' }),
       terser()
     ]
@@ -27,6 +42,7 @@ export default [
       resolve(),
       typescript({ outDir: '.' }),
       commonjs({ ignoreDynamicRequires: true }),
+      retainImports(),
       preserveShebangs()
     ]
   },
@@ -34,7 +50,7 @@ export default [
     input: '@types/pollen.ts',
     output: {
       file: 'index.d.ts',
-      format: 'esm'
+      format: 'es'
     },
     plugins: [resolve({ extensions: ['.ts'] }), typescript({ outDir: '.' })]
   }

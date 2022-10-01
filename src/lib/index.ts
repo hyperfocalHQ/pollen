@@ -1,9 +1,20 @@
 import { kebab } from 'case';
-import mapObject from 'map-obj';
-import type { CustomModule, PollenModule, Query } from '../../@types/pollen';
+import { program } from 'commander';
+import fs from 'fs';
 import { stringify } from 'javascript-stringify';
-import prettier from 'prettier/standalone';
+import { lilconfig } from 'lilconfig';
+import mapObject from 'map-obj';
+import path from 'path';
 import prettierCSS from 'prettier/parser-postcss';
+import prettier from 'prettier/standalone';
+import type {
+  ConfigObject,
+  CustomModule,
+  PollenModule,
+  Query
+} from '../../@types/pollen';
+import modules from '../modules';
+import url from 'url';
 
 /**
  * Configured Prettier instance
@@ -72,4 +83,98 @@ export function queriesToCSS(
       })
       .join('\n')}`
   );
+}
+
+/**
+ * Gets user config
+ */
+export async function getConfig() {
+  const importDefault = async (filepath: string) => {
+      const module = await import(url.pathToFileURL(filepath).href);
+      return module.default;
+    },
+    interopRequireDefault = (obj: any) =>
+      obj && obj.__esModule ? obj : { default: obj };
+
+  // Init CLI
+  program
+    .option('-o, --output <path>', 'output file path')
+    .option('-c, --config <path>', 'config file path');
+  program.parse(process.argv);
+
+  // Default config
+  const defaultConfig = {
+    output: './pollen.css',
+    modules: Object.keys(modules).reduce(
+      (acc, cur) => ({ ...acc, [cur]: true }),
+      {}
+    )
+  };
+
+  // User config
+  const cli = program.opts(),
+    configure = lilconfig('pollen', {
+      loaders: {
+        '.js': importDefault,
+        '.mjs': importDefault
+      }
+    }),
+    configFile = cli.config
+      ? await configure.load(cli.config)
+      : await configure.search();
+
+  let config = interopRequireDefault(configFile?.config).default || {};
+
+  if (typeof config === 'function') {
+    config = config(modules);
+  }
+
+  return { ...defaultConfig, ...config, ...cli };
+}
+
+/**
+ * Writes files to CSS and JSON
+ */
+export function writeFiles(config: ConfigObject, data: PollenModule) {
+  const output =
+      typeof config.output === 'string'
+        ? { css: config.output, json: undefined }
+        : config.output,
+    selector = config?.selector || ':root';
+
+  const writeDirIfNeeded = (filePath: string) => {
+    const dir = path.dirname(filePath);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+  };
+
+  if (!output?.css) {
+    throw new Error('No output given');
+  }
+
+  writeDirIfNeeded(output.css);
+  output.json && writeDirIfNeeded(output.json);
+
+  fs.writeFileSync(
+    path.resolve(process.cwd(), output.css!),
+    format(
+      `/**
+  * THIS IS AN AUTO-GENERATED FILE
+  * Edit Pollen config to update
+  */
+      ${toCSS(selector, formatModule(data))}
+      ${queriesToCSS(selector, {
+        ...(config.media ? { media: config.media } : {}),
+        ...(config.supports ? { supports: config.supports } : {})
+      })}
+      `
+    )
+  );
+
+  output.json &&
+    fs.writeFileSync(
+      path.resolve(process.cwd(), output.json),
+      JSON.stringify(data, null, 2)
+    );
 }
