@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import mapObject, { mapObjectSkip } from 'map-obj';
+import { ConfigObject } from '../@types/pollen';
 import { getConfig, writeFiles } from './lib';
 import modules from './modules';
 
@@ -14,5 +15,5 @@ import modules from './modules';
         : ([key, val] as any);
     });
 
-  writeFiles(config, css);
+  writeFiles(config as ConfigObject, css);
 })();

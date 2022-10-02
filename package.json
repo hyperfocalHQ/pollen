@@ -64,6 +64,7 @@
     "case": "^1.6.3",
     "commander": "^9.4.0",
     "css-vars-ponyfill": "^2.4.8",
+    "deepmerge": "^4.2.2",
     "javascript-stringify": "^2.1.0",
     "lilconfig": "^2.0.6",
     "map-obj": "^5.0.2",

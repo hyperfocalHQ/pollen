@@ -15,6 +15,7 @@ import type {
 } from '../../@types/pollen';
 import modules from '../modules';
 import url from 'url';
+import merge from 'deepmerge';
 
 /**
  * Configured Prettier instance
@@ -129,7 +130,7 @@ export async function getConfig() {
     config = config(modules);
   }
 
-  return { ...defaultConfig, ...config, ...cli };
+  return merge(defaultConfig, config, cli);
 }
 
 /**
