@@ -35,7 +35,7 @@ export default {
     '0': fluid(14, 16),
     '1': fluid(16, 18),
     '2': fluid(18, 20),
-    '3': fluid(29, 24),
+    '3': fluid(20, 24),
     '4': fluid(24, 30),
     '5': fluid(30, 36),
     '6': fluid(36, 48),
