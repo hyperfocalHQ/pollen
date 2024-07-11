@@ -6,14 +6,18 @@ import modules from './modules';
 
 (async () => {
   const config = await getConfig(),
-    css = mapObject(config.modules, (key: string, val: string) => {
-      if (!val) {
-        return mapObjectSkip;
+    css = mapObject(
+      config.modules,
+      (key: string, val: { [property: string]: string } | boolean) => {
+        if (val === false) {
+          return mapObjectSkip;
+        }
+
+        return typeof val === 'object'
+          ? ([key, val] as any)
+          : [key, modules[key as keyof typeof modules]];
       }
-      return typeof val === 'boolean'
-        ? [key, modules[key as keyof typeof modules]]
-        : ([key, val] as any);
-    });
+    );
 
   writeFiles(config as ConfigObject, css);
 })();

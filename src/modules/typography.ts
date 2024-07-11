@@ -1,4 +1,4 @@
-import { fluid } from '../utils';
+import { fluid } from '../utils/fluid';
 
 /**
  * Typography

@@ -13,8 +13,7 @@
     "build": "NODE_ENV=production rollup -c && node ./index.js ",
     "prepublishOnly": "npm run build && npm run test",
     "clean": "rm -rf ./pollen.css ./utils",
-    "test": "vitest run",
-    "test:coverage": "vitest --coverage",
+    "test": "vitest run --coverage",
     "prepare": "husky install"
   },
   "files": [
@@ -47,8 +46,10 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^14.1.0",
+    "@types/node": "^20.14.10",
     "@types/prettier": "^2.7.0",
     "@types/stringify-object": "^4.0.1",
+    "@vitest/coverage-istanbul": "^2.0.2",
     "c8": "^7.12.0",
     "husky": "^8.0.1",
     "rollup": "^2.79.0",
@@ -58,7 +59,7 @@
     "stylelint": "^14.11.0",
     "tslib": "^2.4.0",
     "typescript": "^4.8.3",
-    "vitest": "^0.23.2"
+    "vitest": "^2.0.0"
   },
   "dependencies": {
     "commander": "^9.4.0",
