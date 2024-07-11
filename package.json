@@ -61,7 +61,6 @@
     "vitest": "^0.23.2"
   },
   "dependencies": {
-    "case": "^1.6.3",
     "commander": "^9.4.0",
     "css-vars-ponyfill": "^2.4.8",
     "deepmerge": "^4.2.2",

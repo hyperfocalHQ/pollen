@@ -8,12 +8,12 @@ const FIXTURES = {
         camelCase: 'value',
         numeric: 0
       },
-      bModule: {
+      b: {
         property: 'value'
       }
     },
     css: {
-      '--a-camel-case': 'value',
+      '--a-camelCase': 'value',
       '--a-numeric': 0,
       '--a-property': 'value'
     },
@@ -48,15 +48,15 @@ const FIXTURES = {
   EXPECTED = {
     format: `
     {
-      "--a-camel-case": "value",
+      "--a-camelCase": "value",
       "--a-numeric": 0,
       "--a-property": "value",
-      "--b-module-property": "value",
+      "--b-property": "value",
     }
   `,
     css: `
     ":root {
-      --a-camel-case: value;
+      --a-camelCase: value;
       --a-numeric: 0;
       --a-property: value;
     }

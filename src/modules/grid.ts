@@ -8,9 +8,9 @@ export default {
      * Page Grid
      * Applied to grid-template-columns
      */
-    pageWidth: 'var(--width-xl)',
-    pageGutter: '5vw',
-    pageMain: '2 / 3',
+    'page-width': 'var(--width-xl)',
+    'page-gutter': '5vw',
+    'page-main': '2 / 3',
     page: 'minmax(var(--grid-page-gutter), 1fr) minmax(0, var(--grid-page-width)) minmax(var(--grid-page-gutter), 1fr)',
 
     /**

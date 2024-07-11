@@ -1,4 +1,3 @@
-import { kebab } from 'case';
 import { program } from 'commander';
 import fs from 'fs';
 import { stringify } from 'javascript-stringify';
@@ -35,10 +34,7 @@ export function formatModule(module: PollenModule & CustomModule) {
     .map((family) => {
       return mapObject(
         module[family as keyof typeof module],
-        (key: string, value: string) => [
-          `--${kebab(family)}-${kebab(String(key))}`,
-          value
-        ]
+        (key: string, value: string) => [`--${family}-${key}`, value]
       );
     })
     .reduce((acc, cur) => ({ ...acc, ...cur }), {});
