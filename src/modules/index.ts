@@ -9,5 +9,5 @@ export default {
   ...layout,
   ...ui,
   ...colors,
-  ...grid
+  ...grid,
 };

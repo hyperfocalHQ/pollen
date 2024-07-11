@@ -6,44 +6,44 @@ const FIXTURES = {
     a: {
       property: "value",
       camelCase: "value",
-      numeric: 0
+      numeric: 0,
     },
     b: {
-      property: "value"
-    }
+      property: "value",
+    },
   },
   css: {
     "--a-camelCase": "value",
     "--a-numeric": 0,
-    "--a-property": "value"
+    "--a-property": "value",
   },
   cssQueries: {
     media: {
       "(min-width: 640px)": {
         a: {
-          property: "value"
+          property: "value",
         },
         b: {
-          property: "value"
-        }
+          property: "value",
+        },
       },
       "(min-width: 960px)": {
         a: {
-          property: "value"
-        }
-      }
+          property: "value",
+        },
+      },
     },
     supports: {
       "not (display: grid)": {
         c: {
-          property: "value"
+          property: "value",
         },
         d: {
-          property: "value"
-        }
-      }
-    }
-  }
+          property: "value",
+        },
+      },
+    },
+  },
 };
 const EXPECTED = {
   format: `
@@ -73,13 +73,13 @@ const EXPECTED = {
       --c-property: value;
       --d-property: value
     }}"
-    `
+    `,
 };
 
 describe("formatModule()", () => {
   test("formats modules correctly", () => {
     expect(formatModule(FIXTURES.format as any)).toMatchInlineSnapshot(
-      EXPECTED.format
+      EXPECTED.format,
     );
   });
 });
@@ -93,7 +93,7 @@ describe("toCSS()", () => {
 describe("queriesToCSS()", () => {
   test("turns query object into CSS", () => {
     expect(
-      queriesToCSS(":root", FIXTURES.cssQueries as any)
+      queriesToCSS(":root", FIXTURES.cssQueries as any),
     ).toMatchInlineSnapshot(EXPECTED.cssQueries);
   });
 });

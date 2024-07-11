@@ -38,7 +38,7 @@ export default {
     full: "100%",
     screen: "100vw",
     min: "min-content",
-    max: "max-content"
+    max: "max-content",
   },
 
   /**
@@ -50,7 +50,7 @@ export default {
     sm: "640px",
     md: "768px",
     lg: "1024px",
-    xl: "1280px"
+    xl: "1280px",
   },
 
   /**
@@ -64,6 +64,6 @@ export default {
     tall: "2/3",
     wide: "3/2",
     widescreen: "16/9",
-    golden: "1.618/1"
-  }
+    golden: "1.618/1",
+  },
 };

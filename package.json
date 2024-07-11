@@ -51,7 +51,6 @@
     "@types/prettier": "^2.7.3",
     "@types/stringify-object": "^4.0.5",
     "@vitest/coverage-istanbul": "^2.0.2",
-    "c8": "^10.1.2",
     "eslint": "^9.6.0",
     "eslint-config-prettier": "^9.1.0",
     "globals": "^15.8.0",

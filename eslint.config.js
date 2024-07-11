@@ -6,15 +6,15 @@ export default [
   ...ts.configs.recommended,
   prettier,
   {
-    ignores: ["**/node_modules/**", "**/*.js"]
+    ignores: ["**/node_modules/**", "**/*.js"],
   },
   {
     files: ["**/*.ts"],
     languageOptions: {
       globals: {
         ...globals.browser,
-        ...globals.nodeBuiltin
-      }
+        ...globals.nodeBuiltin,
+      },
     },
     rules: {
       curly: "warn",
@@ -50,9 +50,9 @@ export default [
         {
           argsIgnorePattern: "^_",
           varsIgnorePattern: "^_",
-          caughtErrorsIgnorePattern: "^_"
-        }
-      ]
-    }
-  }
+          caughtErrorsIgnorePattern: "^_",
+        },
+      ],
+    },
+  },
 ];

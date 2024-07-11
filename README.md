@@ -50,17 +50,17 @@ module.exports = (pollen) => ({
     color: {
       ...pollen.colors,
       bg: "white",
-      text: "var(--color-black)"
-    }
+      text: "var(--color-black)",
+    },
   },
   media: {
     "(prefers-color-scheme: dark)": {
       color: {
         bg: "var(--color-black)",
-        text: "white"
-      }
-    }
-  }
+        text: "white",
+      },
+    },
+  },
 });
 ```
 

@@ -16,7 +16,7 @@ import modules from "./modules";
       return typeof val === "object"
         ? ([key, val] as any)
         : [key, modules[key as keyof typeof modules]];
-    }
+    },
   );
 
   writeFiles(config as ConfigObject, css);

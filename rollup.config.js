@@ -13,9 +13,9 @@ function retainImports() {
     renderDynamicImport() {
       return {
         left: "import(",
-        right: ")"
+        right: ")",
       };
-    }
+    },
   };
 }
 
@@ -24,34 +24,34 @@ export default [
     input: "src/utils/index.ts",
     output: {
       dir: "dist/utils",
-      format: "es"
+      format: "es",
     },
     plugins: [
       resolve({ browser: true }),
       typescript({ outDir: "utils" }),
-      terser()
-    ]
+      terser(),
+    ],
   },
   {
     input: "src/index.ts",
     output: {
       dir: "dist",
-      format: "es"
+      format: "es",
     },
     plugins: [
       resolve(),
       typescript({ outDir: "." }),
       commonjs(),
       retainImports(),
-      preserveShebangs()
-    ]
+      preserveShebangs(),
+    ],
   },
   {
     input: "@types/pollen.ts",
     output: {
       file: "dist/index.d.ts",
-      format: "es"
+      format: "es",
     },
-    plugins: [resolve({ extensions: [".ts"] }), typescript({ outDir: "." })]
-  }
+    plugins: [resolve({ extensions: [".ts"] }), typescript({ outDir: "." })],
+  },
 ];

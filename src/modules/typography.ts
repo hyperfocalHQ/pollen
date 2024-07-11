@@ -22,7 +22,7 @@ export default {
     "7": "3.75rem" /* 60px */,
     "8": "4.5rem" /* 72px */,
     "9": "6rem" /* 96px */,
-    "10": "8rem" /* 128px */
+    "10": "8rem" /* 128px */,
   },
 
   /**
@@ -42,7 +42,7 @@ export default {
     "7": fluid(48, 60),
     "8": fluid(60, 72),
     "9": fluid(72, 96),
-    "10": fluid(96, 128)
+    "10": fluid(96, 128),
   },
 
   /**
@@ -52,7 +52,7 @@ export default {
   font: {
     sans: `ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
     serif: `ui-serif, Georgia, Cambria, "Times New Roman", Times, serif`,
-    mono: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
+    mono: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
   },
 
   weight: {
@@ -62,7 +62,7 @@ export default {
     semibold: "600",
     bold: "700",
     extrabold: "800",
-    black: "900"
+    black: "900",
   },
 
   /**
@@ -74,7 +74,7 @@ export default {
     sm: 1.275,
     md: 1.5,
     lg: 1.625,
-    xl: 2
+    xl: 2,
   },
 
   /**
@@ -85,7 +85,7 @@ export default {
     sm: "-0.025em",
     none: "0em",
     lg: "0.025em",
-    xl: "0.05em"
+    xl: "0.05em",
   },
 
   /**
@@ -97,6 +97,6 @@ export default {
     sm: "55ch",
     md: "65ch",
     lg: "75ch",
-    xl: "85ch"
-  }
+    xl: "85ch",
+  },
 };

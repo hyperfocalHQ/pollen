@@ -285,6 +285,6 @@ export default {
     "rose-800": "#9f1239",
     "rose-900": "#881337",
     "rose-950": "#4c0519",
-    rose: "var(--color-rose-500)"
-  }
+    rose: "var(--color-rose-500)",
+  },
 };

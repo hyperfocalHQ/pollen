@@ -42,7 +42,7 @@ jobs:
           run_install: true
       - name: Unit Tests
         run: pnpm test
-  
+
   build:
     runs-on: ubuntu-latest
     steps:
@@ -59,4 +59,3 @@ jobs:
           run_install: true
       - name: Build
         run: pnpm build
-  

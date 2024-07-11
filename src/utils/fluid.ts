@@ -5,7 +5,7 @@ export function fluid(
   minSize: number,
   maxSize: number,
   minWidth = 480,
-  maxWidth = 1280
+  maxWidth = 1280,
 ) {
   const slope = (maxSize - minSize) / (maxWidth - minWidth);
   const yAxisIntersection = -minWidth * slope + minSize;

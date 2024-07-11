@@ -9,7 +9,7 @@ import type {
   ConfigObject,
   CustomModule,
   PollenModule,
-  Query
+  Query,
 } from "../../@types/pollen";
 import modules from "../modules";
 import url from "url";
@@ -32,7 +32,7 @@ export function formatModule(module: PollenModule & CustomModule) {
     .map((family) => {
       return mapObject(
         module[family as keyof typeof module],
-        (key: string, value: string) => [`--${family}-${key}`, value]
+        (key: string, value: string) => [`--${family}-${key}`, value],
       );
     })
     .reduce((acc, cur) => ({ ...acc, ...cur }), {});
@@ -43,13 +43,13 @@ export function formatModule(module: PollenModule & CustomModule) {
  */
 export function toCSS(
   selector: string,
-  object: { [key: string]: string | number }
+  object: { [key: string]: string | number },
 ) {
   return `${selector} ${stringify(
     object,
     (value, indent, stringify) =>
       typeof value === "string" ? value : stringify(value),
-    2
+    2,
   )?.replace(/,\n/g, ";\n")}`;
 }
 
@@ -60,7 +60,7 @@ export function queriesToCSS(
   selector: string,
   data: {
     [type: string]: Query;
-  }
+  },
 ) {
   return `${Object.keys(data)
     .map((type) => {
@@ -68,7 +68,7 @@ export function queriesToCSS(
         .map((query) => {
           return `@${type} ${query} { ${toCSS(
             selector,
-            formatModule(data[type][query] as any)
+            formatModule(data[type][query] as any),
           )}}`;
         })
         .join("\n")}`;
@@ -98,8 +98,8 @@ export async function getConfig() {
     output: "./pollen.css",
     modules: Object.keys(modules).reduce(
       (acc, cur) => ({ ...acc, [cur]: true }),
-      {}
-    )
+      {},
+    ),
   };
 
   // User config
@@ -107,8 +107,8 @@ export async function getConfig() {
   const configure = lilconfig("pollen", {
     loaders: {
       ".js": importDefault,
-      ".mjs": importDefault
-    }
+      ".mjs": importDefault,
+    },
   });
   const configFile = cli.config
     ? await configure.load(cli.config)
@@ -156,9 +156,9 @@ export async function writeFiles(config: ConfigObject, data: PollenModule) {
     ${toCSS(selector, formatModule(data))}
     ${queriesToCSS(selector, {
       ...(config.media ? { media: config.media } : {}),
-      ...(config.supports ? { supports: config.supports } : {})
+      ...(config.supports ? { supports: config.supports } : {}),
     })}
-    `
+    `,
   );
 
   await fs.writeFile(path.resolve(process.cwd(), output.css!), css);
@@ -166,7 +166,7 @@ export async function writeFiles(config: ConfigObject, data: PollenModule) {
   if (output.json) {
     await fs.writeFile(
       path.resolve(process.cwd(), output.json),
-      JSON.stringify(data, null, 2)
+      JSON.stringify(data, null, 2),
     );
   }
 }

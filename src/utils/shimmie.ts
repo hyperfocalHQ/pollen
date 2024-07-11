@@ -19,7 +19,7 @@ export function shimmie({
           onComplete?.();
           document.body.style.visibility = "visible";
         },
-        ...config
+        ...config,
       });
     });
   }

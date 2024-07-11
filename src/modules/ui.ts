@@ -14,7 +14,7 @@ export default {
     lg: "12px",
     xl: "16px",
     100: "100%",
-    full: "9999px"
+    full: "9999px",
   },
 
   /**
@@ -26,7 +26,7 @@ export default {
     sm: "blur(8px)",
     md: "blur(16px)",
     lg: "blur(24px)",
-    xl: "blur(40px)"
+    xl: "blur(40px)",
   },
 
   /**
@@ -40,7 +40,7 @@ export default {
     3: 30,
     4: 40,
     5: 50,
-    top: 2147483647
+    top: 2147483647,
   },
 
   /**
@@ -52,7 +52,7 @@ export default {
     sm: "0 4px 6px -2px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06)",
     md: "0 12px 16px -4px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
     lg: "0 20px 24px -4px rgba(0, 0, 0, 0.1), 0 8px 8px -4px rgba(0, 0, 0, 0.04)",
-    xl: "0 24px 48px -12px rgba(0, 0, 0, 0.25)"
+    xl: "0 24px 48px -12px rgba(0, 0, 0, 0.25)",
   },
 
   /**
@@ -83,6 +83,6 @@ export default {
     "in-out-circ": "cubic-bezier(0.785, 0.135, 0.15, 0.86)",
     "in-back": "cubic-bezier(0.6, -0.28, 0.735, 0.045)",
     "out-back": "cubic-bezier(0.175, 0.885, 0.32, 1.275)",
-    "in-out-back": "cubic-bezier(0.68, -0.55, 0.265, 1.55)"
-  }
+    "in-out-back": "cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+  },
 };
