@@ -43,6 +43,15 @@
     "url": "https://github.com/heybokeh/pollen/issues"
   },
   "homepage": "https://www.pollen.style",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "css-vars-ponyfill": "^2.4.9",
+    "javascript-stringify": "^2.1.0",
+    "lilconfig": "^3.1.2",
+    "lodash-es": "^4.17.21",
+    "map-obj": "^5.0.2",
+    "prettier": "^3.3.2"
+  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
@@ -63,14 +72,5 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.0-alpha.41",
     "vitest": "^2.0.2"
-  },
-  "dependencies": {
-    "commander": "^12.1.0",
-    "css-vars-ponyfill": "^2.4.9",
-    "javascript-stringify": "^2.1.0",
-    "lilconfig": "^3.1.2",
-    "lodash-es": "^4.17.21",
-    "map-obj": "^5.0.2",
-    "prettier": "^3.3.2"
   }
 }
