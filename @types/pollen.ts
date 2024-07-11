@@ -1,4 +1,4 @@
-import modules from '../src/modules';
+import modules from "../src/modules";
 type ModuleName = keyof typeof modules;
 
 export type CustomModule = {

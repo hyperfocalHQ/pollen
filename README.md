@@ -44,20 +44,20 @@ Pollen's design tokens can be used to build any project. They're easy to customi
 
 ```js
 module.exports = (pollen) => ({
-  output: './pollen.css',
+  output: "./pollen.css",
   modules: {
     ...pollen,
     color: {
       ...pollen.colors,
-      bg: 'white',
-      text: 'var(--color-black)'
+      bg: "white",
+      text: "var(--color-black)"
     }
   },
   media: {
-    '(prefers-color-scheme: dark)': {
+    "(prefers-color-scheme: dark)": {
       color: {
-        bg: 'var(--color-black)',
-        text: 'white'
+        bg: "var(--color-black)",
+        text: "white"
       }
     }
   }

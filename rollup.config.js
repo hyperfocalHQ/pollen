@@ -1,19 +1,19 @@
-import commonjs from '@rollup/plugin-commonjs';
-import resolve from '@rollup/plugin-node-resolve';
-import typescript from 'rollup-plugin-ts';
-import { preserveShebangs } from 'rollup-plugin-preserve-shebangs';
-import { terser } from 'rollup-plugin-terser';
+import commonjs from "@rollup/plugin-commonjs";
+import resolve from "@rollup/plugin-node-resolve";
+import typescript from "rollup-plugin-ts";
+import { preserveShebangs } from "rollup-plugin-preserve-shebangs";
+import { terser } from "rollup-plugin-terser";
 
 function retainImports() {
   return {
-    name: 'retain-import-expression',
+    name: "retain-import-expression",
     resolveDynamicImport() {
       return false;
     },
     renderDynamicImport() {
       return {
-        left: 'import(',
-        right: ')'
+        left: "import(",
+        right: ")"
       };
     }
   };
@@ -21,37 +21,37 @@ function retainImports() {
 
 export default [
   {
-    input: 'src/utils/index.ts',
+    input: "src/utils/index.ts",
     output: {
-      dir: 'utils',
-      format: 'cjs'
+      dir: "dist/utils",
+      format: "es"
     },
     plugins: [
       resolve({ browser: true }),
-      typescript({ outDir: 'utils' }),
+      typescript({ outDir: "utils" }),
       terser()
     ]
   },
   {
-    input: 'src/index.ts',
+    input: "src/index.ts",
     output: {
-      dir: '.',
-      format: 'cjs'
+      dir: "dist",
+      format: "es"
     },
     plugins: [
       resolve(),
-      typescript({ outDir: '.' }),
-      commonjs({ ignoreDynamicRequires: true }),
+      typescript({ outDir: "." }),
+      commonjs(),
       retainImports(),
       preserveShebangs()
     ]
   },
   {
-    input: '@types/pollen.ts',
+    input: "@types/pollen.ts",
     output: {
-      file: 'index.d.ts',
-      format: 'es'
+      file: "dist/index.d.ts",
+      format: "es"
     },
-    plugins: [resolve({ extensions: ['.ts'] }), typescript({ outDir: '.' })]
+    plugins: [resolve({ extensions: [".ts"] }), typescript({ outDir: "." })]
   }
 ];
