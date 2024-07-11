@@ -1,1 +1,1 @@
-declare module 'map-obj';
+declare module "map-obj";

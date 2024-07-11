@@ -1,11 +1,11 @@
-import { defineConfig } from 'vitest/config';
+import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   test: {
-    include: ['./src/**/*.test.ts'],
+    include: ["./src/**/*.test.ts"],
     coverage: {
-      include: ['./src/**'],
-      provider: 'istanbul'
+      include: ["./src/**"],
+      provider: "istanbul"
     }
   }
 });

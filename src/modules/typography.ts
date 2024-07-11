@@ -1,4 +1,4 @@
-import { fluid } from '../utils/fluid';
+import { fluid } from "../utils/fluid";
 
 /**
  * Typography
@@ -10,39 +10,39 @@ export default {
    * Applied as font-size
    */
   scale: {
-    '000': '0.75rem' /* 12px */,
-    '00': '0.875rem' /* 14px */,
-    '0': '1rem' /* 16px */,
-    '1': '1.125rem' /* 18px */,
-    '2': '1.25rem' /* 20px */,
-    '3': '1.5rem' /* 24px */,
-    '4': '1.875rem' /* 30px */,
-    '5': '2.25rem' /* 36px */,
-    '6': '3rem' /* 48px */,
-    '7': '3.75rem' /* 60px */,
-    '8': '4.5rem' /* 72px */,
-    '9': '6rem' /* 96px */,
-    '10': '8rem' /* 128px */
+    "000": "0.75rem" /* 12px */,
+    "00": "0.875rem" /* 14px */,
+    "0": "1rem" /* 16px */,
+    "1": "1.125rem" /* 18px */,
+    "2": "1.25rem" /* 20px */,
+    "3": "1.5rem" /* 24px */,
+    "4": "1.875rem" /* 30px */,
+    "5": "2.25rem" /* 36px */,
+    "6": "3rem" /* 48px */,
+    "7": "3.75rem" /* 60px */,
+    "8": "4.5rem" /* 72px */,
+    "9": "6rem" /* 96px */,
+    "10": "8rem" /* 128px */
   },
 
   /**
    * Fluid type scale using generated clamp()
    * Applied as font-size
    */
-  scaleFluid: {
-    '000': fluid(10, 12),
-    '00': fluid(12, 14),
-    '0': fluid(14, 16),
-    '1': fluid(16, 18),
-    '2': fluid(18, 20),
-    '3': fluid(20, 24),
-    '4': fluid(24, 30),
-    '5': fluid(30, 36),
-    '6': fluid(36, 48),
-    '7': fluid(48, 60),
-    '8': fluid(60, 72),
-    '9': fluid(72, 96),
-    '10': fluid(96, 128)
+  "scale-fluid": {
+    "000": fluid(10, 12),
+    "00": fluid(12, 14),
+    "0": fluid(14, 16),
+    "1": fluid(16, 18),
+    "2": fluid(18, 20),
+    "3": fluid(20, 24),
+    "4": fluid(24, 30),
+    "5": fluid(30, 36),
+    "6": fluid(36, 48),
+    "7": fluid(48, 60),
+    "8": fluid(60, 72),
+    "9": fluid(72, 96),
+    "10": fluid(96, 128)
   },
 
   /**
@@ -50,19 +50,19 @@ export default {
    * Applied as font-family and font-weight
    */
   font: {
-    sans: 'system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue',
+    sans: "system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue",
     serif: 'Georgia, Cambria, "Times New Roman", Times, serif',
     mono: 'Consolas, Menlo, Monaco, "Liberation Mono", monospace'
   },
 
   weight: {
-    light: '300',
-    regular: '400',
-    medium: '500',
-    semibold: '600',
-    bold: '700',
-    extrabold: '800',
-    black: '900'
+    light: "300",
+    regular: "400",
+    medium: "500",
+    semibold: "600",
+    bold: "700",
+    extrabold: "800",
+    black: "900"
   },
 
   /**
@@ -81,11 +81,11 @@ export default {
    * Letter spacing
    */
   letter: {
-    xs: '-0.05em',
-    sm: '-0.025em',
-    none: '0em',
-    lg: '0.025em',
-    xl: '0.05em'
+    xs: "-0.05em",
+    sm: "-0.025em",
+    none: "0em",
+    lg: "0.025em",
+    xl: "0.05em"
   },
 
   /**
@@ -93,10 +93,10 @@ export default {
    * Applied as max-width
    */
   prose: {
-    xs: '45ch',
-    sm: '55ch',
-    md: '65ch',
-    lg: '75ch',
-    xl: '85ch'
+    xs: "45ch",
+    sm: "55ch",
+    md: "65ch",
+    lg: "75ch",
+    xl: "85ch"
   }
 };

@@ -1,21 +1,17 @@
 {
   "compilerOptions": {
-    /* Basic Options */
-    "target": "esnext",
-    "module": "esnext",
-
-    /* Type-Checking Options */
-    "strict": true,
-
-    /* Compiler options */
-    "removeComments": true,
-    "declaration": true,
-
-    /* Module resoltion */
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "lib": ["esnext", "DOM"],
     "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": false,
+    "module": "esnext",
+    "target": "esnext",
     "esModuleInterop": true,
+    "strict": true,
     "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true
+    "rootDir": "."
   },
-  "include": ["src", "@types"]
+  "exclude": ["**/node_modules"],
+  "include": ["@types", "src"]
 }
