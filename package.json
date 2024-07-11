@@ -19,7 +19,7 @@
   },
   "exports": {
     ".": "./dist/index.js",
-    "./utils": "./dist/utils",
+    "./utils": "./dist/utils/index.js",
     "./pollen.css": "./dist/pollen.css"
   },
   "repository": {
