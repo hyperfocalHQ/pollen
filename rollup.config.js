@@ -4,21 +4,6 @@ import typescript from "rollup-plugin-ts";
 import { preserveShebangs } from "rollup-plugin-preserve-shebangs";
 import { terser } from "rollup-plugin-terser";
 
-function retainImports() {
-  return {
-    name: "retain-import-expression",
-    resolveDynamicImport() {
-      return false;
-    },
-    renderDynamicImport() {
-      return {
-        left: "import(",
-        right: ")",
-      };
-    },
-  };
-}
-
 export default [
   {
     input: "src/utils/index.ts",
@@ -42,7 +27,6 @@ export default [
       resolve(),
       typescript({ outDir: "." }),
       commonjs(),
-      retainImports(),
       preserveShebangs(),
     ],
   },

@@ -1,4 +1,6 @@
-import type { CSSVarsPonyfillOptions } from "css-vars-ponyfill";
+import cssVarsPonyfill, {
+  type CSSVarsPonyfillOptions,
+} from "css-vars-ponyfill";
 /**
  * Conditionally load and apply a shim for CSS variables in IE
  */
@@ -11,16 +13,14 @@ export function shimmie({
 
   if (!test) {
     document.body.style.visibility = "hidden";
-    import("css-vars-ponyfill").then(({ default: cssVarsPonyfill }) => {
-      cssVarsPonyfill({
-        watch: true,
-        updateURLs: false,
-        onComplete() {
-          onComplete?.();
-          document.body.style.visibility = "visible";
-        },
-        ...config,
-      });
+    cssVarsPonyfill({
+      watch: true,
+      updateURLs: false,
+      onComplete() {
+        onComplete?.();
+        document.body.style.visibility = "visible";
+      },
+      ...config,
     });
   }
 }
