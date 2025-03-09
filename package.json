@@ -3,9 +3,9 @@
   "type": "module",
   "version": "5.0.1",
   "description": "Utility-first CSS for the future",
-  "main": "pollen.css",
-  "style": "pollen.css",
-  "types": "types.d.ts",
+  "main": "dist/pollen.css",
+  "style": "dist/pollen.css",
+  "types": "dist/index.d.ts",
   "bin": {
     "pollen": "dist/index.js"
   },
