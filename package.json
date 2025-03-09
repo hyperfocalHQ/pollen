@@ -1,7 +1,7 @@
 {
   "name": "pollen-css",
   "type": "module",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "Utility-first CSS for the future",
   "main": "dist/pollen.css",
   "style": "dist/pollen.css",
